@@ -40,8 +40,7 @@ HEADERS += \
     transport.h
 
 FORMS += \
-        mainwindow.ui \
-        mainwindowl.ui
+        mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
