@@ -336,6 +336,19 @@
        <string/>
       </property>
      </widget>
+     <widget class="QPushButton" name="pbarduino">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>40</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Afficheur LCD</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_3">
      <attribute name="title">

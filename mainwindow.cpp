@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "transport.h"
+#include "arduino.h"
+
 #include <QMessageBox>
 #include <QIntValidator>
 #include <QDebug>
@@ -24,6 +26,18 @@
 #include <QPieSlice>
 #include<QPieSeries>
 #include<QtCharts>
+
+
+#include <QtSql>
+
+#include <QSqlQueryModel>
+#include <QtCharts/QChartView>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QBarSeries>
+#include <QtCharts/QBarCategoryAxis>
+#include <QSerialPort>
+#include <QSerialPortInfo>
+
 
 using namespace qrcodegen;
 
@@ -434,4 +448,25 @@ void MainWindow::on_pb_CSV_clicked()
               {
                   QDate date = QDate::currentDate();
                   return date.toString("dd.MM.yyyy");
+}
+
+void MainWindow::on_pbarduino_clicked()
+{
+    // int critere = ui->la_matricule->text().toInt();
+     QString matricule=ui->line_recherche->text();
+
+
+
+            //QSqlQueryModel *verif=T.rechercher(matricule);
+
+        // Créez une instance de la classe Ventes
+        Transport t;
+
+        if (t.rechercher(matricule)) {
+
+                Ar.write_to_arduino("1");
+            } else {
+
+               Ar.write_to_arduino("0");
+            }
 }

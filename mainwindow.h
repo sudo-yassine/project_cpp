@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "transport.h"
+#include "arduino.h"
 
 namespace Ui {
 class MainWindow;
@@ -37,10 +38,14 @@ private slots:
 
   void on_pb_CSV_clicked();
 
+  void on_pbarduino_clicked();
+
 private:
     Ui::MainWindow *ui;
     Transport t;
+    Arduino Ar;
 };
+
 
 #endif // MAINWINDOW_H
 

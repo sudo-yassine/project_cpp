@@ -8,6 +8,9 @@
 
 QT       += core gui sql
 
+QT += serialport
+
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -27,6 +30,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++
 
 SOURCES += \
+    arduino.cpp \
         main.cpp \
         mainwindow.cpp \
     connection.cpp \
@@ -34,6 +38,7 @@ SOURCES += \
     transport.cpp
 
 HEADERS += \
+    arduino.h \
         mainwindow.h \
     connection.h \
     qrcode.h \
