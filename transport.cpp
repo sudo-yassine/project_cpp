@@ -109,23 +109,28 @@ QSqlQueryModel* Transport::afficher()
 }
 
 
-QSqlQueryModel * Transport::rechercher(QString matricule)
+QSqlQueryModel *Transport::rechercher(QString matricule)
 {
+   QSqlQuery query;
+   query.prepare("SELECT * from GS_MOYEN_DE_TRANSPORT  WHERE matricule = :matricule");
+   query.bindValue(":matricule", matricule);
+   query.exec();
 
-    QSqlQuery query;
-   // QString matricule_string=QString::number(matricule);
-        query.prepare("SELECT * from GS_MOYEN_DE_TRANSPORT  WHERE matricule = :matricule");
-       // query.bindValue(":matricule", matricule_string );
-        query.bindValue(":matricule", matricule );
+   QSqlQueryModel *model = new QSqlQueryModel;
 
-
-        query.exec();
-                 QSqlQueryModel *model= new QSqlQueryModel;
-                 model->setQuery(query);
-
-
-                return model;
-    }
+   // Check if there are any results
+   if (query.next())
+   {
+       model->setQuery(query);
+       return model;
+   }
+   else
+   {
+       // No results, return nullptr
+       delete model;
+       return nullptr;
+   }
+}
 QSqlQueryModel * Transport::tri()
          {
              QSqlQuery *q = new QSqlQuery();

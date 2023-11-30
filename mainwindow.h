@@ -43,6 +43,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Transport t;
+    QByteArray data;
     Arduino Ar;
 };
 

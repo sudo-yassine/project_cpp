@@ -9,10 +9,10 @@ class Arduino
 {
 public:
     Arduino();
-    int connect_arduino(const QString &portName);
+    int connect_arduino(const QString &portName); 
     int close_arduino();
-    QByteArray read_from_arduino();
-    int write_to_arduino(const QString &data);  // Change the parameter type here
+    QByteArray read_from_arduino(); // liaison entre qt arduino 
+    int write_to_arduino(const QString &data);  // Change the parameter type here   mel arduino lel qt 
     QSerialPort* getserial();
     QString getarduino_port_name();
 

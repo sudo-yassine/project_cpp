@@ -4,6 +4,7 @@
 #include <QString>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
+
 class Transport
 {
 public:
@@ -29,14 +30,12 @@ public:
    bool modifier();
     bool supprimer(QString);
 
-    QSqlQueryModel * rechercher(QString matricule);
+   QSqlQueryModel * rechercher(QString matricule);
     QSqlQueryModel * tri();
-
-
+   QString rechercherIdDansLaBaseDeDonnees(const QString &matricule);
 private:
     QString matricule, type_panne, marque, type;
     int etat, papier;
-
 };
 
 #endif // TRANSPORT_H

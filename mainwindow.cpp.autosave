@@ -453,11 +453,15 @@ void MainWindow::on_pb_CSV_clicked()
                                                                            "Click OK to exit."), QMessageBox::Ok);
                                  }
               }
+
+// fonction 
               QString currDate()
               {
                   QDate date = QDate::currentDate();
                   return date.toString("dd.MM.yyyy");
 }
+              
+ //fonction 
               QString rechercherIdDansLaBaseDeDonnees(const QString &matricule) {
                           QSqlQuery query;
                           query.prepare("SELECT MARQUE FROM GS_MOYEN_DE_TRANSPORT WHERE MATRICULE = :matricule");
@@ -471,6 +475,8 @@ void MainWindow::on_pb_CSV_clicked()
                           return QString();  // Retourne une chaîne vide si la marque n'est pas trouvée ou s'il y a une erreur
                           }
                   }
+              
+  // fonction 
 
               void MainWindow::on_pbarduino_clicked() {
                                 QString matricule = ui->line_recherche->text();
