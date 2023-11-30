@@ -43,8 +43,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Transport t;
-    QByteArray data;
-    Arduino Ar;
+    QByteArray data; // // variable contenant les données reçues
+
+    Arduino Ar; // objet temporaire
 };
 
 

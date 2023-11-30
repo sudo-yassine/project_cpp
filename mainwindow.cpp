@@ -58,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent) :
           qDebug() << "Arduino is available and connected to: " << Ar.getarduino_port_name();
           // Connect Arduino signal to the update_label slot
           QObject::connect(Ar.getserial(), SIGNAL(readyRead()), this, SLOT(update_label()));
+          // permet de lancer le slot update_label suite à la reception du signal readyRead (reception des données).
           break;
       case 1:
           qDebug() << "Arduino is available but already connected to: " << Ar.getarduino_port_name();
@@ -66,6 +67,7 @@ MainWindow::MainWindow(QWidget *parent) :
       case -1:
           qDebug() << "Arduino is not available";
           // Handle the case where Arduino is not available
+          // Gérer le cas où Arduino n'est pas disponible
           break;
       }
 
@@ -453,37 +455,49 @@ void MainWindow::on_pb_CSV_clicked()
                                                                            "Click OK to exit."), QMessageBox::Ok);
                                  }
               }
+
+// fonction
               QString currDate()
               {
                   QDate date = QDate::currentDate();
                   return date.toString("dd.MM.yyyy");
 }
-              QString rechercherIdDansLaBaseDeDonnees(const QString &matricule) {
-                          QSqlQuery query;
-                          query.prepare("SELECT MARQUE FROM GS_MOYEN_DE_TRANSPORT WHERE MATRICULE = :matricule");
-                          query.bindValue(":matricule", matricule);
 
-                          if (query.exec() && query.next()) {
-                          return query.value(0).toString();
-                          } else {
+ //fonction
+  QString rechercherIdDansLaBaseDeDonnees(const QString &matricule)
+              {
+                          QSqlQuery query;
+                          query.prepare("SELECT MARQUE FROM GS_MOYEN_DE_TRANSPORT WHERE MATRICULE = :matricule");// Recherche de la marque de la voiture dans la base de donnee
+                          query.bindValue(":matricule", matricule); //Cette fonction retourne true en cas de succès ou false si une erreur survient.
+
+                          if (query.exec() && query.next())
+                          {
+                          return query.value(0).toString(); //La méthode toString() renvoie une chaîne de caractères représentant l'objet.
+                          }
+                          else
+                          {
                           // Add error handling logic here, for example, display an error message
                           qDebug() << "Erreur: Marque non trouvée dans la base de données";
-                          return QString();  // Retourne une chaîne vide si la marque n'est pas trouvée ou s'il y a une erreur
+                          return QString();  // Retourne une chaîne vide si la marque de la vehicule n'est pas trouvée ou s'il y a une erreur
                           }
-                  }
+              }
 
-              void MainWindow::on_pbarduino_clicked() {
-                                QString matricule = ui->line_recherche->text();
+  // fonction
 
-                                if (Ar.connect_arduino("COM7") == 0) { //changer le com si necessaire
+  void MainWindow::on_pbarduino_clicked()  //implémentation du slot bouton affichage lcd
+                                {
+                                QString matricule = ui->line_recherche->text();// line_recherche win hattinha matricule a chercher
+
+                                if (Ar.connect_arduino("COM7") == 0) { //changer le com si necessaire // com7 a droite
                                                    qDebug() << "Connected to Arduino";
 
-                                                   // Utilize QString to store the return value of the search
+                                                  //on utilise QString pour stocker la valeur de retour de la recherche
                                                    QString marque = rechercherIdDansLaBaseDeDonnees(matricule);
 
-                                                   // Utilize a valid value (perhaps "-1") to indicate no match
-                                                   if (!marque.isEmpty()) {
-                                                       // Send to Arduino as plain text
+                                                   //lezmna nesta3mlou une valeur valide (peut-être "-1") pour indiquer qu'il n'y a aucune correspondance
+                                                   if (!marque.isEmpty())
+                                                   {
+                                                       // naba3thou l  Arduino sous forme de texte brut
                                                        Ar.write_to_arduino(marque);
                                                        qDebug() << "Sent to Arduino: " << marque;
 

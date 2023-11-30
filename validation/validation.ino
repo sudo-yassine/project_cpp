@@ -1,15 +1,18 @@
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+#include <LiquidCrystal_I2C.h> // include the library code
 
 #define I2C_ADDR 0x27 // Adjust the I2C address based on your LCD display
 #define buttonPin 2    // Pin connected to the external button
 
 LiquidCrystal_I2C lcd(I2C_ADDR, 16, 2);
+// set the LCD address to I2C_ADDR for a 16 chars and 2 line display
+// 16 caracteres 2 lignes
+
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(9600); // Initialiser la communication série
   Serial.println("Initializing LCD...");
-  lcd.init();
+  lcd.init();  // Initialize the LCD
   lcd.backlight();
   Serial.println("LCD initialized.");
 

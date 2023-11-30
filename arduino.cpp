@@ -20,21 +20,25 @@ QSerialPort* Arduino::getserial()
 }
 int Arduino::connect_arduino(const QString &portName)
 {
+    // recherche du port sur lequel la carte arduino identifée par  arduino_uno_vendor_id est connectée
+
     if (serial->isOpen()) {
         serial->close();
         serial->setBaudRate(QSerialPort::Baud9600);
-        QThread::msleep(1000); // Add a delay after closing the port
+        QThread::msleep(1000); // // Ajout d'un délai après la fermeture du port
     }
 
     arduino_port_name = portName;
     serial->setPortName(arduino_port_name);
 
     if (serial->open(QSerialPort::ReadWrite)) {
-        serial->setBaudRate(QSerialPort::Baud9600);
-        serial->setDataBits(QSerialPort::Data8);
-        serial->setParity(QSerialPort::NoParity);
-        serial->setStopBits(QSerialPort::OneStop);
+        serial->setBaudRate(QSerialPort::Baud9600);// débit : 9600 bits/s
+        serial->setDataBits(QSerialPort::Data8);//Longueur des données : 8 bits
+        serial->setParity(QSerialPort::NoParity);//1 bit de parité optionnel
+        serial->setStopBits(QSerialPort::OneStop); //Nombre de bits de stop : 1
         serial->setFlowControl(QSerialPort::NoFlowControl);
+
+
 
         QThread::msleep(1000); // Adjust the delay time as needed
 
@@ -57,7 +61,7 @@ int Arduino::close_arduino()
 QByteArray Arduino::read_from_arduino()
 {
     if(serial->isReadable()){
-        data = serial->readAll();
+        data = serial->readAll();  //récupérer les données reçues
         return data;
     }
     return QByteArray(); // Return an empty QByteArray if not readable
@@ -66,10 +70,10 @@ QByteArray Arduino::read_from_arduino()
 int Arduino::write_to_arduino(const QString &data) {
     QByteArray byteArray = data.toUtf8(); // Convert QString to QByteArray
 
-    if (serial->isWritable()) {
+    if (serial->isWritable()) { // envoyer des donnés vers Arduino
         for (int i = 0; i < byteArray.length(); ++i) {
             serial->putChar(byteArray.at(i));
-            serial->waitForBytesWritten(5000); // Wait for data to be written (adjust the timeout as needed)
+            serial->waitForBytesWritten(5000); //Attendez que les données soient écrites (ajustez le délai d'attente si nécessaire)
         }
         return 0; // Success
     } else {
