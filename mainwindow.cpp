@@ -463,6 +463,7 @@ void MainWindow::on_pb_CSV_clicked()
                   return date.toString("dd.MM.yyyy");
 }
 
+
  //fonction
   QString rechercherIdDansLaBaseDeDonnees(const QString &matricule)
               {

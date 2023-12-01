@@ -1,5 +1,6 @@
 #include "arduino.h"
 #include "qthread.h"
+#include <QMessageBox>
 
 Arduino::Arduino()
 {
@@ -58,16 +59,21 @@ int Arduino::close_arduino()
     }
     return 1;
 }
-QByteArray Arduino::read_from_arduino()
+QByteArray Arduino::read_from_arduino() // bouttoun
+// liaison entre qt arduino // //recevoir des données de la carte Arduino
 {
     if(serial->isReadable()){
         data = serial->readAll();  //récupérer les données reçues
+         qDebug() << "done!";
         return data;
     }
     return QByteArray(); // Return an empty QByteArray if not readable
 }
 
-int Arduino::write_to_arduino(const QString &data) {
+
+int Arduino::write_to_arduino(const QString &data) // LCD 16/2
+// Change the parameter type here   mel arduino lel qt  // envoyer des données vers arduino
+{
     QByteArray byteArray = data.toUtf8(); // Convert QString to QByteArray
 
     if (serial->isWritable()) { // envoyer des donnés vers Arduino
@@ -75,9 +81,29 @@ int Arduino::write_to_arduino(const QString &data) {
             serial->putChar(byteArray.at(i));
             serial->waitForBytesWritten(5000); //Attendez que les données soient écrites (ajustez le délai d'attente si nécessaire)
         }
-        return 0; // Success
+        return 0;
+
+        // Success
     } else {
         qDebug() << "Couldn't write to serial!";
-        return 1; // Failure
+        return 1;
+
+        // Failure
     }
+
+    /*
+
+    QMessageBox::information(nullptr, QObject::tr("Success"),
+                             QObject::tr("Sent to Arduino successfully."),
+                             QMessageBox::Ok);
+ else
+{
+    qDebug() << "Not found in the database for the entered matricule: " << matricule;
+
+    QMessageBox::critical(nullptr, QObject::tr("Error"),
+                          QObject::tr("Not found in the database for the entered matricule."),
+                          QMessageBox::Cancel);
+
+    */
 }
+
