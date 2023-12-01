@@ -5,6 +5,7 @@
 #include"client.h"
 namespace Ui {
 class MainWindow;
+//cmnt
 }
 
 class MainWindow : public QMainWindow
