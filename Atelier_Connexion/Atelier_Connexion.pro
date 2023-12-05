@@ -26,21 +26,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    arduino.cpp \
     localisation.cpp \
     login.cpp \
         main.cpp \
-        mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    mainwindow_lolcalisation.cpp
 
 HEADERS += \
+    arduino.h \
     localisation.h \
     login.h \
-        mainwindow.h \
-    connection.h
+    connection.h \
+    mainwindow_lolcalisation.h
 
 FORMS += \
         login.ui \
-        mainwindow.ui
+        mainwindow_lolcalisation.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

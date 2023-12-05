@@ -55,6 +55,8 @@ public:
     QPushButton *bouton_ajouter;
     QLabel *label_4;
     QLabel *label_15;
+    QLabel *label_24;
+    QLineEdit *etat;
     QWidget *tab_Localisation;
     QTableView *table_Localisation;
     QLabel *label_14;
@@ -82,6 +84,8 @@ public:
     QLineEdit *distance_2;
     QPushButton *bouton_modifier;
     QLabel *label_13;
+    QLabel *label_25;
+    QLineEdit *etat_2;
     QPushButton *bouton_annuler_2;
     QWidget *widget;
     QGroupBox *groupBox_5;
@@ -110,6 +114,11 @@ public:
     QPushButton *sendButton;
     QLabel *label_21;
     QLabel *label_19;
+    QWidget *tab;
+    QPushButton *pushButton;
+    QLineEdit *lineEdit;
+    QLabel *label_22;
+    QLabel *label_23;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -139,11 +148,11 @@ public:
         tab_ajout->setObjectName(QStringLiteral("tab_ajout"));
         groupBox = new QGroupBox(tab_ajout);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(110, 40, 971, 521));
+        groupBox->setGeometry(QRect(110, 20, 971, 521));
         groupBox->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 180, 218, 92), stop:0.895604 rgba(0, 248, 210, 140));"));
         label_3 = new QLabel(groupBox);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(30, 40, 161, 51));
+        label_3->setGeometry(QRect(30, 20, 161, 51));
         QFont font;
         font.setFamily(QStringLiteral("Tw Cen MT"));
         font.setPointSize(18);
@@ -157,28 +166,28 @@ public:
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label = new QLabel(groupBox);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(30, 280, 121, 51));
+        label->setGeometry(QRect(30, 220, 121, 51));
         label->setFont(font);
         label->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_2 = new QLabel(groupBox);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(30, 120, 121, 51));
+        label_2->setGeometry(QRect(40, 70, 121, 51));
         label_2->setFont(font);
         label_2->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_5 = new QLabel(groupBox);
         label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(30, 440, 121, 51));
+        label_5->setGeometry(QRect(40, 370, 121, 51));
         label_5->setFont(font);
         label_5->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_6 = new QLabel(groupBox);
         label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(30, 200, 121, 51));
+        label_6->setGeometry(QRect(30, 150, 121, 51));
         label_6->setFont(font);
         label_6->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
@@ -186,7 +195,7 @@ public:
         num_demande = new QLineEdit(groupBox);
         num_demande->setObjectName(QStringLiteral("num_demande"));
         num_demande->setEnabled(true);
-        num_demande->setGeometry(QRect(210, 40, 221, 51));
+        num_demande->setGeometry(QRect(210, 20, 221, 51));
         QFont font1;
         font1.setFamily(QStringLiteral("Segoe UI"));
         font1.setPointSize(14);
@@ -204,7 +213,7 @@ public:
         id_client = new QLineEdit(groupBox);
         id_client->setObjectName(QStringLiteral("id_client"));
         id_client->setEnabled(true);
-        id_client->setGeometry(QRect(210, 440, 221, 51));
+        id_client->setGeometry(QRect(220, 370, 221, 51));
         id_client->setFont(font1);
         id_client->setAutoFillBackground(false);
         id_client->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -216,7 +225,7 @@ public:
         temps = new QLineEdit(groupBox);
         temps->setObjectName(QStringLiteral("temps"));
         temps->setEnabled(true);
-        temps->setGeometry(QRect(210, 120, 221, 51));
+        temps->setGeometry(QRect(210, 80, 221, 51));
         temps->setFont(font1);
         temps->setAutoFillBackground(false);
         temps->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -228,7 +237,7 @@ public:
         local = new QLineEdit(groupBox);
         local->setObjectName(QStringLiteral("local"));
         local->setEnabled(true);
-        local->setGeometry(QRect(210, 360, 221, 51));
+        local->setGeometry(QRect(220, 290, 221, 51));
         local->setFont(font1);
         local->setAutoFillBackground(false);
         local->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -240,7 +249,7 @@ public:
         montant = new QLineEdit(groupBox);
         montant->setObjectName(QStringLiteral("montant"));
         montant->setEnabled(true);
-        montant->setGeometry(QRect(210, 280, 221, 51));
+        montant->setGeometry(QRect(220, 220, 221, 51));
         montant->setFont(font1);
         montant->setAutoFillBackground(false);
         montant->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -252,7 +261,7 @@ public:
         distance = new QLineEdit(groupBox);
         distance->setObjectName(QStringLiteral("distance"));
         distance->setEnabled(true);
-        distance->setGeometry(QRect(210, 200, 221, 51));
+        distance->setGeometry(QRect(210, 150, 221, 51));
         distance->setFont(font1);
         distance->setAutoFillBackground(false);
         distance->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -291,7 +300,7 @@ public:
         bouton_ajouter->setIcon(icon1);
         label_4 = new QLabel(groupBox);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(40, 360, 121, 51));
+        label_4->setGeometry(QRect(40, 290, 121, 51));
         label_4->setFont(font);
         label_4->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
@@ -307,6 +316,12 @@ public:
         label_15->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
         label_15->setScaledContents(true);
         label_15->setWordWrap(false);
+        label_24 = new QLabel(groupBox);
+        label_24->setObjectName(QStringLiteral("label_24"));
+        label_24->setGeometry(QRect(40, 450, 121, 51));
+        etat = new QLineEdit(groupBox);
+        etat->setObjectName(QStringLiteral("etat"));
+        etat->setGeometry(QRect(220, 450, 221, 51));
         tabWidget->addTab(tab_ajout, QString());
         tab_Localisation = new QWidget();
         tab_Localisation->setObjectName(QStringLiteral("tab_Localisation"));
@@ -406,38 +421,38 @@ public:
         Modifier->setObjectName(QStringLiteral("Modifier"));
         groupBox_2 = new QGroupBox(Modifier);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(110, 40, 971, 521));
+        groupBox_2->setGeometry(QRect(90, 30, 971, 521));
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(30, 40, 151, 51));
+        label_8->setGeometry(QRect(30, 20, 151, 51));
         label_8->setFont(font);
         label_8->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_9 = new QLabel(groupBox_2);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(30, 280, 121, 51));
+        label_9->setGeometry(QRect(40, 230, 121, 51));
         label_9->setFont(font);
         label_9->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_10 = new QLabel(groupBox_2);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(30, 120, 121, 51));
+        label_10->setGeometry(QRect(40, 80, 121, 51));
         label_10->setFont(font);
         label_10->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(30, 440, 121, 51));
+        label_11->setGeometry(QRect(40, 380, 121, 51));
         label_11->setFont(font);
         label_11->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_12 = new QLabel(groupBox_2);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(30, 200, 121, 51));
+        label_12->setGeometry(QRect(40, 160, 121, 51));
         label_12->setFont(font);
         label_12->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
@@ -445,7 +460,7 @@ public:
         num_demande_2 = new QLineEdit(groupBox_2);
         num_demande_2->setObjectName(QStringLiteral("num_demande_2"));
         num_demande_2->setEnabled(true);
-        num_demande_2->setGeometry(QRect(210, 40, 221, 51));
+        num_demande_2->setGeometry(QRect(220, 20, 221, 51));
         num_demande_2->setFont(font1);
         num_demande_2->setAutoFillBackground(false);
         num_demande_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -457,7 +472,7 @@ public:
         id_client_2 = new QLineEdit(groupBox_2);
         id_client_2->setObjectName(QStringLiteral("id_client_2"));
         id_client_2->setEnabled(true);
-        id_client_2->setGeometry(QRect(210, 440, 221, 51));
+        id_client_2->setGeometry(QRect(220, 380, 221, 51));
         id_client_2->setFont(font1);
         id_client_2->setAutoFillBackground(false);
         id_client_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -469,7 +484,7 @@ public:
         temps_2 = new QLineEdit(groupBox_2);
         temps_2->setObjectName(QStringLiteral("temps_2"));
         temps_2->setEnabled(true);
-        temps_2->setGeometry(QRect(210, 120, 221, 51));
+        temps_2->setGeometry(QRect(220, 90, 221, 51));
         temps_2->setFont(font1);
         temps_2->setAutoFillBackground(false);
         temps_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -481,7 +496,7 @@ public:
         local_2 = new QLineEdit(groupBox_2);
         local_2->setObjectName(QStringLiteral("local_2"));
         local_2->setEnabled(true);
-        local_2->setGeometry(QRect(210, 360, 221, 51));
+        local_2->setGeometry(QRect(210, 300, 221, 51));
         local_2->setFont(font1);
         local_2->setAutoFillBackground(false);
         local_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -493,7 +508,7 @@ public:
         montant_2 = new QLineEdit(groupBox_2);
         montant_2->setObjectName(QStringLiteral("montant_2"));
         montant_2->setEnabled(true);
-        montant_2->setGeometry(QRect(210, 280, 221, 51));
+        montant_2->setGeometry(QRect(220, 230, 221, 51));
         montant_2->setFont(font1);
         montant_2->setAutoFillBackground(false);
         montant_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -505,7 +520,7 @@ public:
         distance_2 = new QLineEdit(groupBox_2);
         distance_2->setObjectName(QStringLiteral("distance_2"));
         distance_2->setEnabled(true);
-        distance_2->setGeometry(QRect(210, 200, 221, 51));
+        distance_2->setGeometry(QRect(220, 170, 221, 51));
         distance_2->setFont(font1);
         distance_2->setAutoFillBackground(false);
         distance_2->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -530,11 +545,17 @@ public:
         bouton_modifier->setIcon(icon5);
         label_13 = new QLabel(groupBox_2);
         label_13->setObjectName(QStringLiteral("label_13"));
-        label_13->setGeometry(QRect(40, 360, 121, 51));
+        label_13->setGeometry(QRect(50, 300, 121, 51));
         label_13->setFont(font);
         label_13->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
+        label_25 = new QLabel(groupBox_2);
+        label_25->setObjectName(QStringLiteral("label_25"));
+        label_25->setGeometry(QRect(40, 470, 131, 31));
+        etat_2 = new QLineEdit(groupBox_2);
+        etat_2->setObjectName(QStringLiteral("etat_2"));
+        etat_2->setGeometry(QRect(220, 460, 211, 51));
         bouton_annuler_2 = new QPushButton(Modifier);
         bouton_annuler_2->setObjectName(QStringLiteral("bouton_annuler_2"));
         bouton_annuler_2->setGeometry(QRect(700, 320, 161, 81));
@@ -679,6 +700,26 @@ public:
         label_19->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/send-4008.png")));
         label_19->setScaledContents(true);
         tabWidget->addTab(widget1, QString());
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        pushButton = new QPushButton(tab);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setGeometry(QRect(510, 440, 181, 51));
+        lineEdit = new QLineEdit(tab);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(510, 360, 181, 41));
+        label_22 = new QLabel(tab);
+        label_22->setObjectName(QStringLiteral("label_22"));
+        label_22->setGeometry(QRect(430, 130, 331, 91));
+        label_22->setAlignment(Qt::AlignCenter);
+        label_23 = new QLabel(tab);
+        label_23->setObjectName(QStringLiteral("label_23"));
+        label_23->setGeometry(QRect(540, 230, 121, 121));
+        label_23->setStyleSheet(QLatin1String("border-color: transparent;\n"
+"background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 180, 218, 0), stop:0.896373 rgba(0, 248, 210, 0));"));
+        label_23->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/arrow-right-2817.png")));
+        label_23->setScaledContents(true);
+        tabWidget->addTab(tab, QString());
 
         horizontalLayout->addWidget(tabWidget);
 
@@ -696,7 +737,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(6);
+        tabWidget->setCurrentIndex(0);
         toolBox->setCurrentIndex(1);
 
 
@@ -722,6 +763,7 @@ public:
         bouton_ajouter->setText(QApplication::translate("MainWindow", "AJOUTER", Q_NULLPTR));
         label_4->setText(QApplication::translate("MainWindow", "local", Q_NULLPTR));
         label_15->setText(QString());
+        label_24->setText(QApplication::translate("MainWindow", "ETAT", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_ajout), QApplication::translate("MainWindow", "Ajouter", Q_NULLPTR));
         label_14->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
         bouton_tri->setText(QApplication::translate("MainWindow", "TRI", Q_NULLPTR));
@@ -749,6 +791,7 @@ public:
         distance_2->setText(QString());
         bouton_modifier->setText(QApplication::translate("MainWindow", "MODIFIER", Q_NULLPTR));
         label_13->setText(QApplication::translate("MainWindow", "local", Q_NULLPTR));
+        label_25->setText(QApplication::translate("MainWindow", "Etat", Q_NULLPTR));
         bouton_annuler_2->setText(QApplication::translate("MainWindow", "ANNULER", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(Modifier), QApplication::translate("MainWindow", "Modifier une demande", Q_NULLPTR));
         groupBox_5->setTitle(QApplication::translate("MainWindow", "GENERATION", Q_NULLPTR));
@@ -771,6 +814,10 @@ public:
         label_21->setText(QString());
         label_19->setText(QString());
         tabWidget->setTabText(tabWidget->indexOf(widget1), QApplication::translate("MainWindow", "Mail", Q_NULLPTR));
+        pushButton->setText(QApplication::translate("MainWindow", "VALIDER", Q_NULLPTR));
+        label_22->setText(QString());
+        label_23->setText(QString());
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "arduino", Q_NULLPTR));
     } // retranslateUi
 
 };

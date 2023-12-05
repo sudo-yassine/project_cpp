@@ -2,10 +2,11 @@
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
+#include "login.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
+    login w;
     Connection c;
     bool test=c.createconnect();
     if(test)

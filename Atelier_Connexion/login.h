@@ -2,7 +2,7 @@
 #define LOGIN_H
 
 #include <QDialog>
-#include "mainwindow.h"
+#include "mainwindow_lolcalisation.h"
 
 namespace Ui {
 class login;

@@ -9,17 +9,19 @@ class Localisation
 {
 public:
     Localisation();
-    Localisation(int ,int ,int ,int ,QString,int );
+    Localisation(int ,int ,int ,int ,QString,int, int );
     int getnum_demande();
     int gettemps();
     int getdistance();
     int getmontant();
     int getid_client();
+    int getetat();
     QString getlocal();
     void setnum_demande(int);
     void settemps(int);
     void setdistance(int);
     void setmontant(int);
+    void setetat(int);
     void setlocal(QString);
     bool ajouter();
     QSqlQueryModel * afficher();
@@ -31,6 +33,8 @@ public:
     QSqlQuery calcluleAriana();
     QSqlQuery calcluleManouba();
     QSqlQuery calcluleSousse();
+    bool rechercher_arduino(int num_demande);
+    bool rechercher_arduino1(int etat);
 
 
 
@@ -41,6 +45,7 @@ int temps;
 int distance;
 int montant;
 int id_client;
+int etat;
 QString local;
 };
 
