@@ -32,20 +32,20 @@ CONFIG += c++
 SOURCES += \
     arduino.cpp \
         main.cpp \
-        mainwindow.cpp \
     connection.cpp \
+    mainwindow_moyen.cpp \
     qrcode.cpp \
     transport.cpp
 
 HEADERS += \
     arduino.h \
-        mainwindow.h \
     connection.h \
+    mainwindow_moyen.h \
     qrcode.h \
     transport.h
 
 FORMS += \
-        mainwindow.ui
+    mainwindow_moyen.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
