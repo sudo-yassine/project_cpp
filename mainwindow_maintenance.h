@@ -32,9 +32,14 @@ private slots:
 
     void on_tabWidget_currentChanged(int index);
 
-    void on_pb_stat_clicked();
+    //void on_pb_stat_clicked();
 
-    void on_le_stat_linkActivated(const QString &link);
+    //void on_le_stat_linkActivated(const QString &link);
+
+    void on_pb_histo_clicked();
+
+
+    void on_stat_clicked();
 
 private:
     Ui::MainWindow *ui;

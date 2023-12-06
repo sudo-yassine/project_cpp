@@ -36,16 +36,16 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
     maintenance.cpp \
-        mainwindow.cpp \
-    connection.cpp
+    connection.cpp \
+    mainwindow_maintenance.cpp
 
 HEADERS += \
     maintenance.h \
-        mainwindow.h \
-    connection.h
+    connection.h \
+    mainwindow_maintenance.h
 
 FORMS += \
-        mainwindow.ui
+    mainwindow_maintenance.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

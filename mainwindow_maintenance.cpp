@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "mainwindow_maintenance.h"
+#include "ui_mainwindow_maintenance.h"
 #include "maintenance.h"
 #include <QMessageBox>
 #include <QIntValidator>
@@ -19,62 +19,23 @@
 #include<QBarSet>
 #include<QBarSeries>
 
+#include<QFile>
+
+//nouv
+#include <QSqlQuery>
+#include <QSqlError>
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    //stat
-    ui->setupUi(this);
 
-    QBarSet *set0 = new QBarSet("voiture reparée");
+   ui->setupUi(this);
+   ui->tab_MAINTENANCE->setModel(M.afficher());
 
-        QBarSet *set1 = new QBarSet("voiture non reparée");
+   ui->le_NUM_MAINTENANCE ->setValidator(new QIntValidator(0, 9999999, this));
 
-        * set0 << 40<<100 ;
-
-        * set1 << 50<<100  ;
-
-        QBarSeries *series = new QBarSeries();
-
-        series->append(set0);
-
-        series->append(set1);
-
-        QChart *chart = new QChart();
-
-        chart->addSeries(series);
-
-        chart->setTitle("MAINTENANCE");
-
-        chart->setAnimationOptions(QChart:: SeriesAnimations);
-
-        chart->resize(450,300);
-
-
-
-        QStringList categories;
-
-        categories << " Aujourd'hui" ;
-
-        QBarCategoryAxis *axis = new QBarCategoryAxis();
-
-        axis->append(categories);
-
-        chart->createDefaultAxes();
-
-        chart->setAxisX(axis,series);
-
-
-
-        QChartView *chartView = new QChartView(chart);
-
-        chartView->setParent(ui->le_stat);
-
-
-
-    ui->le_NUM_MAINTENANCE ->setValidator(new QIntValidator(0, 9999999, this));
-    ui->tab_MAINTENANCE->setModel(M.afficher());
 }
 
 MainWindow::~MainWindow()
@@ -88,8 +49,9 @@ void MainWindow::on_pb_Ajouter_clicked()
     QString MATRICULE=ui->le_MATRICULE->text();
     int ID_TECHNICIEN=ui->le_ID_TECHNICIEN->text().toInt();
     int NUM_CONSTAT=ui->le_CONSTAT->text().toInt();
+    int ETAT=ui->le_etat->text().toInt();
 
-Maintenance M(NUM_MAINTENANCE,MATRICULE,ID_TECHNICIEN,NUM_CONSTAT);
+Maintenance M(NUM_MAINTENANCE,MATRICULE,ID_TECHNICIEN,NUM_CONSTAT,ETAT);
 
 bool test=M.ajouter();
 
@@ -130,13 +92,15 @@ void MainWindow::on_pb_Supprimer_clicked()
 
 }
 
+
 void MainWindow::on_pb_mod_clicked()
 {
     double NUM_MAINTENANCE=ui->le_mod_nmain->text().toInt();
     QString MATRICULE=ui->le_mod_matricule->text();
     double ID_TECHNICIEN=ui->le_mod_id->text().toInt();
     double NUM_CONSTAT=ui->le_mod_nconstat->text().toInt();
-    Maintenance M(NUM_MAINTENANCE,MATRICULE,ID_TECHNICIEN,NUM_CONSTAT);
+    double ETAT=ui->le_etat->text().toInt();
+    Maintenance M(NUM_MAINTENANCE,MATRICULE,ID_TECHNICIEN,NUM_CONSTAT,ETAT);
     bool test=M.modifier();
     QMessageBox msgBox;
     if(test)
@@ -151,15 +115,10 @@ void MainWindow::on_pb_mod_clicked()
 }
 
 
-
-
-
-
-
 void MainWindow::on_pb_chercher_clicked()
 {
 
-    QString NUM_MAINTENANCE=ui->le_chercher->text();
+    int  NUM_MAINTENANCE=ui->le_chercher->text().toInt();
     Maintenance M;
 
     QSqlQuery query= M.rechercher(NUM_MAINTENANCE);
@@ -193,7 +152,12 @@ void MainWindow::on_pb_chercher_clicked()
     }
     else
         ui->tab_MAINTENANCE->setModel(M.afficher());
+
+ M.notification_voiture_repare(NUM_MAINTENANCE);
+
 }
+
+
 
 
 
@@ -211,7 +175,7 @@ void MainWindow::on_pb_tri_clicked()
 
 void MainWindow::on_pb_pdf_clicked()
 {
-    QPdfWriter pdf("C:/Users/rouak/OneDrive/Bureau/Atelier_Connexion/PDF/.pdf");
+    QPdfWriter pdf("PDF/.pdf");
 
              QPainter painter(&pdf);
              QString strStream;
@@ -233,6 +197,7 @@ void MainWindow::on_pb_pdf_clicked()
                     painter.drawText(2300,3300,"MATRICULE");
                     painter.drawText(3300,3300,"ID_TECHNICIEN");
                     painter.drawText(5300,3300,"NUM_CONSTAT");
+                    painter.drawText(5300,3300,"ETAT");
 
 
 
@@ -259,5 +224,58 @@ void MainWindow::on_pb_pdf_clicked()
                     QMessageBox::information(this, QObject::tr("PDF Enregistré!"),
                     QObject::tr("PDF Enregistré!.\n" "Click Cancel to exit."), QMessageBox::Cancel);
 }
+//nouv
 
+
+void MainWindow::on_pb_histo_clicked()
+{
+        // Appeler la fonction rechercherall de la classe maintenance
+        QSqlQuery query = M.rechercherall();
+
+        // Vérifier si la requête s'est exécutée avec succès
+        if (query.exec())
+        {
+            QFile file("resultats.txt");
+            if (file.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Append))
+            {
+                // Utiliser QTextStream pour écrire dans le fichier
+                QTextStream out(&file);
+
+                // Parcourir les résultats de la requête et enregistrer dans le fichier
+                while (query.next())
+                {
+                    out << "NUM_MAINTENANCE: " << query.value("NUM_MAINTENANCE").toString() << "\n";
+                    out << "MATRICULE: " << query.value("MATRICULE").toInt() << "\n";
+                    out << "ID_TECHNICIEN: " << query.value("ID_TECHNICIEN").toString() << "\n";
+                    out << "NUM_CONSTAT: " << query.value("NUM_CONSTAT").toString() << "\n";
+                    out << "ETAT: " << query.value("ETAT").toString() << "\n";
+                }
+
+                file.close();
+            }
+            else
+            {
+                qDebug() << "Erreur d'ouverture du fichier";
+            }
+        }
+        else
+        {
+            qDebug() << "Erreur d'exécution de la requête : " << query.lastError().text();
+        }
+
+}
+
+
+
+void MainWindow::on_stat_clicked()
+{
+
+
+
+        QChartView *chartView = M.stat();
+
+
+        chartView->show();
+
+}
 
