@@ -9,7 +9,7 @@ class Localisation
 {
 public:
     Localisation();
-    Localisation(int ,int ,int ,int ,QString,int, int );
+    Localisation(int ,int ,int ,int ,QString,int );
     int getnum_demande();
     int gettemps();
     int getdistance();

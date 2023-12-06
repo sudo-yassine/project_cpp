@@ -9,6 +9,7 @@
 //#include "emailsender.h"
 #include<QBarSet>
 #include<QBarSeries>
+#include <QMainWindow>
 
 namespace Ui {
 class MainWindow;
@@ -22,10 +23,19 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-
 private slots:
+    void on_pushButton_22_clicked();
+
+    void on_pushButton_24_clicked();
+
+    void on_pushButton_26_clicked();
+
+    void on_pushButton_28_clicked();
+
+    void on_pushButton_30_clicked();
 
     void on_bouton_ajouter_clicked();
+
 
     void on_bouton_supprimer_clicked();
 
@@ -49,12 +59,18 @@ private slots:
      void update_label();
      void on_pushButton_clicked();
 
-private:
-    Ui::MainWindow *ui;
-    Localisation L;
-    Arduino A;
-    QByteArray data;
 
+     void on_pushButton_20_clicked();
+
+     void on_pushButton_7_clicked();
+
+     void on_pushButton_14_clicked();
+
+private:
+     Ui::MainWindow *ui;
+     Localisation L;
+     Arduino A;
+     QByteArray data;
 };
 
 #endif // MAINWINDOW_H

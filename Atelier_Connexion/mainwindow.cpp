@@ -1,4 +1,4 @@
-#include "mainwindow_lolcalisation.h"
+#include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "localisation.h"
 #include "arduino.h"
@@ -30,70 +30,37 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-
-    int ret=A.connect_arduino(); // lancer la connexion à arduino
-            switch(ret){
-            case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
-                break;
-            case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
-               break;
-            case(-1):qDebug() << "arduino is not available";
-            }
-             QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
-             //le slot update_label suite à la reception du signal readyRead (reception des données).
-
-
-
-///////////////////////////////////////////////////////////////////////
-
-
-
-//////////////////////////////////////////////////////////
-    //connect(ui->sendButton, &QPushButton::clicked, this, &MainWindow::on_sendButton_clicked);
-    //calendier m = new calendier(ui->calendarWidget);
-    QBarSet *set0 = new QBarSet("demandes SOUSSE");
-    QBarSet *set1 = new QBarSet("demandes TUNIS ");
-    QBarSet *set2 = new QBarSet("demandes MANOUBA");
-    QBarSet *set3 = new QBarSet("demandes ARIANA");
-        * set0 << 40<<100 ;
-        * set1 << 50<<100  ;
-        * set2 << 30<<100  ;
-        * set3 << 70<<100  ;
-
-        QBarSeries *series = new QBarSeries();
-        series->append(set0);
-        series->append(set1);
-        series->append(set2);
-        series->append(set3);
-        QChart *chart = new QChart();
-        chart->addSeries(series);
-        chart->setTitle("DEMANDES");
-        chart->setAnimationOptions(QChart:: SeriesAnimations);
-        chart->resize(750,400);
-        QStringList categories;
-        categories << " Num demandes" ;
-        QBarCategoryAxis *axis = new QBarCategoryAxis();
-        axis->append(categories);
-        chart->createDefaultAxes();
-        chart->setAxisX(axis,series);
-        QChartView *chartView = new QChartView(chart);
-        chartView->setParent(ui->label_7);
 }
-
-
-
 
 MainWindow::~MainWindow()
 {
     delete ui;
-
-    ui->table_Localisation->setModel(L.afficher());
-    ui->table_Localisations->setModel(L.afficher());
-
 }
 
+void MainWindow::on_pushButton_22_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+}
 
+void MainWindow::on_pushButton_24_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(3);
+}
+
+void MainWindow::on_pushButton_26_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_28_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(5);
+}
+
+void MainWindow::on_pushButton_30_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(6);
+}
 
 
 void MainWindow::on_bouton_ajouter_clicked()
@@ -104,11 +71,10 @@ void MainWindow::on_bouton_ajouter_clicked()
     int montant=ui->montant->text().toInt();
     QString local=ui->local->text();
     int id_client=ui->id_client->text().toInt();
-    int etat=ui->etat->text().toInt();
 
 
 
-    Localisation E(num_demande,temps,distance,montant,local,id_client,etat);
+    Localisation E(num_demande,temps,distance,montant,local,id_client);
 
     bool test=E.ajouter();
 
@@ -168,8 +134,7 @@ void MainWindow::on_bouton_modifier_clicked()
     int montant=ui->montant_2->text().toInt();
     QString local=ui->local_2->text();
     int id_client=ui->id_client_2->text().toInt();
-    int etat=ui->etat_2->text().toInt();
-    Localisation L(num_demande,temps,distance,montant,local,id_client,etat);
+    Localisation L(num_demande,temps,distance,montant,local,id_client);
     bool test=L.modifier();
    QMessageBox msgBox;
     if(test )
@@ -349,7 +314,6 @@ void MainWindow::on_bouton_annuler_clicked()
     ui->temps->clear();
     ui->id_client->clear();
     ui->local->clear();
-    ui->etat->clear();
 
 }
 
@@ -379,23 +343,48 @@ void MainWindow::update_label()
 
 void MainWindow::on_pushButton_clicked()
 {
-    int critere = ui->lineEdit->text().toInt();
-QMessageBox msgBox;
+    QString username=ui->username->text();
+        QString password=ui->password->text();
 
-        Localisation L;
-       if (L.rechercher_arduino(critere))
-       {
-           msgBox.setText("***************************\n accès autorisé\n***************************");
-           msgBox.exec();
+        if (username=="admin" && password=="admin")
+        {
+            QMessageBox::information(this,"login","admin mode");
+            //MainWindow *mainwindow =new MainWindow(this);
+            //mainwindow->show();
 
-               A.write_to_arduino("1");
-           } else {
-           msgBox.setText("***************************\n accès refusé\n***************************");
-           msgBox.exec();
+            ui->stackedWidget->setCurrentIndex(1);
 
-              A.write_to_arduino("0");
 
-           }
+        }
+        else if (username=="notAdmin" && password=="notAdmin")
+        {
+            QMessageBox::information(this,"login","not admin mode");
 
+            //Affichage=new affichage(this);
+            //Affichage->show();
+        }
+        else
+        {
+            QMessageBox::warning(this,"login","username or password is not correct");
+
+        }
+}
+
+
+
+void MainWindow::on_pushButton_20_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(7);
+
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pushButton_14_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
 
 }

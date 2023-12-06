@@ -16,7 +16,7 @@ Localisation::Localisation()
     etat=0;
 }
 
-Localisation::Localisation(int num_demande ,int temps,int distance  ,int montant ,QString local ,int id_client,int etat)
+Localisation::Localisation(int num_demande ,int temps,int distance  ,int montant ,QString local ,int id_client)
 {
     this->num_demande=num_demande;
     this->temps=temps;
@@ -24,7 +24,7 @@ Localisation::Localisation(int num_demande ,int temps,int distance  ,int montant
     this->montant=montant;
     this->local=local;
     this->id_client=id_client;
-    this->etat=etat;
+
 }
 
 int Localisation::getnum_demande()

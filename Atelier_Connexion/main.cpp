@@ -1,12 +1,11 @@
-#include "mainwindow_lolcalisation.h"
+#include "mainwindow.h"
 #include <QApplication>
 #include <QMessageBox>
 #include "connection.h"
-#include "login.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    login w;
+    MainWindow w;
     Connection c;
     bool test=c.createconnect();
     if(test)

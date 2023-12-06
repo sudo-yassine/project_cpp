@@ -7,6 +7,7 @@
 QT       += core gui  serialport
 QT       += core gui sql
 QT       += core gui charts
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Atelier_Connexion
@@ -28,26 +29,20 @@ CONFIG += c++11
 SOURCES += \
     arduino.cpp \
     localisation.cpp \
-    login.cpp \
         main.cpp \
-    connection.cpp \
-    mainwindow_lolcalisation.cpp
+        mainwindow.cpp \
+    connection.cpp
 
 HEADERS += \
     arduino.h \
     localisation.h \
-    login.h \
-    connection.h \
-    mainwindow_lolcalisation.h
+        mainwindow.h \
+    connection.h
 
 FORMS += \
-        login.ui \
-        mainwindow_lolcalisation.ui \
-        menu.ui
+        mainwindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES +=
