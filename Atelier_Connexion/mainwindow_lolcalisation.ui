@@ -28,7 +28,7 @@ border-color: darkgreen;
 </string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab_ajout">
        <attribute name="title">
@@ -514,29 +514,6 @@ border-style: transpaent;
          </property>
          <property name="wordWrap">
           <bool>false</bool>
-         </property>
-        </widget>
-        <widget class="QLabel" name="label_24">
-         <property name="geometry">
-          <rect>
-           <x>40</x>
-           <y>450</y>
-           <width>121</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>ETAT</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="etat">
-         <property name="geometry">
-          <rect>
-           <x>220</x>
-           <y>450</y>
-           <width>221</width>
-           <height>51</height>
-          </rect>
          </property>
         </widget>
        </widget>

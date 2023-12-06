@@ -43,10 +43,8 @@ MainWindow::MainWindow(QWidget *parent) :
              QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
              //le slot update_label suite à la reception du signal readyRead (reception des données).
 
-
-
-///////////////////////////////////////////////////////////////////////
-
+             
+///////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////
