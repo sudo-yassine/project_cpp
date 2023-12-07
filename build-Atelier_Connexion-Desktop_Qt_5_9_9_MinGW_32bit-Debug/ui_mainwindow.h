@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCalendarWidget>
-#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -26,7 +25,6 @@
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
 #include <QtWidgets/QToolBar>
-#include <QtWidgets/QToolBox>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -44,7 +42,7 @@ public:
     QLineEdit *username;
     QLineEdit *password;
     QLabel *label_24;
-    QWidget *page_2;
+    QWidget *page_001;
     QWidget *widget;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
@@ -59,29 +57,13 @@ public:
     QPushButton *pushButton_12;
     QPushButton *pushButton_13;
     QPushButton *pushButton_14;
-    QLabel *label_4;
-    QLabel *label_5;
     QPushButton *pushButton_17;
     QStackedWidget *stackedWidget_2;
-    QWidget *page_5;
+    QWidget *page_0;
     QLabel *label;
     QPushButton *pushButton_16;
     QLabel *label_26;
-    QWidget *page_13;
-    QLabel *label_23;
-    QCalendarWidget *calendarWidget;
-    QPushButton *pushButton_18;
-    QPushButton *pushButton_19;
-    QWidget *page_14;
-    QLineEdit *lineEdit;
-    QLabel *label_35;
-    QLabel *label_36;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_20;
-    QPushButton *pushButton_21;
-    QLabel *label_29;
-    QLabel *label_30;
-    QWidget *page_6;
+    QWidget *page_1;
     QGroupBox *groupBox_2;
     QLabel *label_7;
     QLabel *label_8;
@@ -97,28 +79,25 @@ public:
     QPushButton *bouton_annuler;
     QPushButton *bouton_ajouter;
     QLabel *label_12;
-    QLabel *label_15;
-    QPushButton *pushButton_22;
-    QPushButton *pushButton_23;
-    QLabel *label_31;
-    QWidget *page_7;
     QTableView *table_Localisation;
-    QLabel *label_14;
+    QGroupBox *groupBox_4;
+    QLineEdit *supprimer;
+    QPushButton *bouton_supprimer;
     QGroupBox *groupBox_3;
     QPushButton *bouton_recherche;
     QLineEdit *le_recherche;
     QPushButton *bouton_tri;
+    QLabel *label_22;
+    QLabel *label_32;
+    QGroupBox *groupBox_6;
+    QPushButton *bouton_pdf;
+    QPushButton *pushButton_22;
+    QPushButton *pushButton_23;
+    QLabel *label_31;
+    QWidget *page_2;
+    QLabel *label_14;
     QPushButton *pushButton_24;
     QPushButton *pushButton_25;
-    QWidget *page_8;
-    QGroupBox *groupBox_4;
-    QLineEdit *supprimer;
-    QPushButton *bouton_supprimer;
-    QTableView *table_Localisations;
-    QPushButton *pushButton_26;
-    QPushButton *pushButton_27;
-    QLabel *label_27;
-    QWidget *page_9;
     QGroupBox *groupBox_5;
     QLabel *label_13;
     QLabel *label_16;
@@ -133,23 +112,18 @@ public:
     QLineEdit *distance_2;
     QPushButton *bouton_modifier;
     QLabel *label_20;
-    QPushButton *pushButton_28;
-    QPushButton *pushButton_29;
-    QLabel *label_28;
-    QWidget *page_10;
-    QGridLayout *gridLayout;
-    QPushButton *pushButton_31;
+    QTableView *table_Localisations;
+    QWidget *page_3;
+    QPushButton *pushButton_27;
+    QLabel *label_27;
+    QLabel *label_30;
+    QPushButton *pushButton_4;
+    QLabel *label_35;
+    QLineEdit *lineEdit;
+    QLabel *label_36;
+    QGroupBox *groupBox_7;
+    QCalendarWidget *calendarWidget;
     QPushButton *pushButton_2;
-    QLabel *label_25;
-    QPushButton *pushButton_30;
-    QGroupBox *groupBox_6;
-    QPushButton *bouton_pdf;
-    QLabel *label_21;
-    QToolBox *toolBox;
-    QWidget *page_11;
-    QTableView *tab_2;
-    QWidget *page_12;
-    QLabel *label_22;
     QPushButton *pushButton_3;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -172,7 +146,7 @@ public:
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         stackedWidget = new QStackedWidget(centralWidget);
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
-        stackedWidget->setGeometry(QRect(-10, 0, 1921, 971));
+        stackedWidget->setGeometry(QRect(0, 10, 1921, 971));
         page = new QWidget();
         page->setObjectName(QStringLiteral("page"));
         groupBox = new QGroupBox(page);
@@ -268,9 +242,9 @@ public:
         label_24->setScaledContents(true);
         label_24->setWordWrap(false);
         stackedWidget->addWidget(page);
-        page_2 = new QWidget();
-        page_2->setObjectName(QStringLiteral("page_2"));
-        widget = new QWidget(page_2);
+        page_001 = new QWidget();
+        page_001->setObjectName(QStringLiteral("page_001"));
+        widget = new QWidget(page_001);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setGeometry(QRect(10, 10, 81, 941));
         pushButton_5 = new QPushButton(widget);
@@ -293,7 +267,7 @@ public:
         pushButton_6->setAutoExclusive(true);
         pushButton_7 = new QPushButton(widget);
         pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setGeometry(QRect(10, 870, 61, 61));
+        pushButton_7->setGeometry(QRect(10, 840, 61, 61));
         pushButton_7->setCheckable(true);
         pushButton_7->setAutoExclusive(true);
         pushButton_8 = new QPushButton(widget);
@@ -329,7 +303,7 @@ public:
         label_6->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
         label_6->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/370293604_1773005379805812_53322258381366709_n-removebg-preview (1).png")));
         label_6->setScaledContents(true);
-        widget_2 = new QWidget(page_2);
+        widget_2 = new QWidget(page_001);
         widget_2->setObjectName(QStringLiteral("widget_2"));
         widget_2->setGeometry(QRect(100, 10, 191, 941));
         pushButton_10 = new QPushButton(widget_2);
@@ -365,30 +339,25 @@ public:
         pushButton_14->setGeometry(QRect(10, 430, 171, 61));
         pushButton_14->setMinimumSize(QSize(121, 61));
         pushButton_14->setMaximumSize(QSize(500, 5555));
+        pushButton_14->setIcon(icon1);
         pushButton_14->setCheckable(true);
         pushButton_14->setAutoExclusive(true);
-        label_4 = new QLabel(widget_2);
-        label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(70, 10, 41, 21));
-        label_5 = new QLabel(widget_2);
-        label_5->setObjectName(QStringLiteral("label_5"));
-        label_5->setGeometry(QRect(20, 10, 31, 21));
         pushButton_17 = new QPushButton(widget_2);
         pushButton_17->setObjectName(QStringLiteral("pushButton_17"));
-        pushButton_17->setGeometry(QRect(10, 870, 171, 61));
-        stackedWidget_2 = new QStackedWidget(page_2);
+        pushButton_17->setGeometry(QRect(10, 840, 171, 61));
+        stackedWidget_2 = new QStackedWidget(page_001);
         stackedWidget_2->setObjectName(QStringLiteral("stackedWidget_2"));
-        stackedWidget_2->setGeometry(QRect(300, 99, 474, 252));
-        page_5 = new QWidget();
-        page_5->setObjectName(QStringLiteral("page_5"));
-        label = new QLabel(page_5);
+        stackedWidget_2->setGeometry(QRect(300, 99, 1601, 861));
+        page_0 = new QWidget();
+        page_0->setObjectName(QStringLiteral("page_0"));
+        label = new QLabel(page_0);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(310, 180, 971, 431));
-        pushButton_16 = new QPushButton(page_5);
+        pushButton_16 = new QPushButton(page_0);
         pushButton_16->setObjectName(QStringLiteral("pushButton_16"));
         pushButton_16->setGeometry(QRect(1460, 10, 111, 61));
         pushButton_16->setCheckable(true);
-        label_26 = new QLabel(page_5);
+        label_26 = new QLabel(page_0);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setGeometry(QRect(550, 290, 471, 251));
         label_26->setStyleSheet(QLatin1String("background-color: transparent;\n"
@@ -399,99 +368,44 @@ public:
         label_26->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
         label_26->setScaledContents(true);
         label_26->setWordWrap(false);
-        stackedWidget_2->addWidget(page_5);
-        page_13 = new QWidget();
-        page_13->setObjectName(QStringLiteral("page_13"));
-        label_23 = new QLabel(page_13);
-        label_23->setObjectName(QStringLiteral("label_23"));
-        label_23->setGeometry(QRect(550, 20, 421, 51));
-        calendarWidget = new QCalendarWidget(page_13);
-        calendarWidget->setObjectName(QStringLiteral("calendarWidget"));
-        calendarWidget->setGeometry(QRect(20, 100, 1571, 741));
-        calendarWidget->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);selection-color: rgb(98, 98, 98);"));
-        pushButton_18 = new QPushButton(page_13);
-        pushButton_18->setObjectName(QStringLiteral("pushButton_18"));
-        pushButton_18->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_18->setCheckable(true);
-        pushButton_19 = new QPushButton(page_13);
-        pushButton_19->setObjectName(QStringLiteral("pushButton_19"));
-        pushButton_19->setGeometry(QRect(10, 20, 111, 61));
-        pushButton_19->setCheckable(true);
-        stackedWidget_2->addWidget(page_13);
-        page_14 = new QWidget();
-        page_14->setObjectName(QStringLiteral("page_14"));
-        lineEdit = new QLineEdit(page_14);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(660, 430, 181, 41));
-        label_35 = new QLabel(page_14);
-        label_35->setObjectName(QStringLiteral("label_35"));
-        label_35->setGeometry(QRect(590, 150, 331, 91));
-        label_35->setAlignment(Qt::AlignCenter);
-        label_36 = new QLabel(page_14);
-        label_36->setObjectName(QStringLiteral("label_36"));
-        label_36->setGeometry(QRect(690, 260, 121, 121));
-        label_36->setStyleSheet(QLatin1String("border-color: transparent;\n"
-"background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 180, 218, 0), stop:0.896373 rgba(0, 248, 210, 0));"));
-        label_36->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/arrow-right-2817.png")));
-        label_36->setScaledContents(true);
-        pushButton_4 = new QPushButton(page_14);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setGeometry(QRect(660, 530, 181, 51));
-        pushButton_20 = new QPushButton(page_14);
-        pushButton_20->setObjectName(QStringLiteral("pushButton_20"));
-        pushButton_20->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_20->setCheckable(true);
-        pushButton_21 = new QPushButton(page_14);
-        pushButton_21->setObjectName(QStringLiteral("pushButton_21"));
-        pushButton_21->setGeometry(QRect(10, 20, 111, 61));
-        pushButton_21->setCheckable(true);
-        label_29 = new QLabel(page_14);
-        label_29->setObjectName(QStringLiteral("label_29"));
-        label_29->setGeometry(QRect(560, 20, 371, 51));
-        label_29->setAlignment(Qt::AlignCenter);
-        label_30 = new QLabel(page_14);
-        label_30->setObjectName(QStringLiteral("label_30"));
-        label_30->setGeometry(QRect(610, 590, 291, 251));
-        label_30->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/robotic-arm-8193 (1).png")));
-        label_30->setScaledContents(true);
-        stackedWidget_2->addWidget(page_14);
-        page_6 = new QWidget();
-        page_6->setObjectName(QStringLiteral("page_6"));
-        groupBox_2 = new QGroupBox(page_6);
+        stackedWidget_2->addWidget(page_0);
+        page_1 = new QWidget();
+        page_1->setObjectName(QStringLiteral("page_1"));
+        groupBox_2 = new QGroupBox(page_1);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
-        groupBox_2->setGeometry(QRect(20, 80, 1621, 761));
+        groupBox_2->setGeometry(QRect(10, 80, 1571, 761));
         groupBox_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 180, 218, 92), stop:0.895604 rgba(0, 248, 210, 140));"));
         label_7 = new QLabel(groupBox_2);
         label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(30, 20, 161, 51));
+        label_7->setGeometry(QRect(20, 20, 161, 51));
         label_7->setFont(font1);
         label_7->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_8 = new QLabel(groupBox_2);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(30, 220, 121, 51));
+        label_8->setGeometry(QRect(20, 200, 121, 51));
         label_8->setFont(font1);
         label_8->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_9 = new QLabel(groupBox_2);
         label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(40, 70, 121, 51));
+        label_9->setGeometry(QRect(20, 70, 121, 51));
         label_9->setFont(font1);
         label_9->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_10 = new QLabel(groupBox_2);
         label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(40, 370, 121, 51));
+        label_10->setGeometry(QRect(20, 320, 121, 51));
         label_10->setFont(font1);
         label_10->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
         label_11 = new QLabel(groupBox_2);
         label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(30, 150, 121, 51));
+        label_11->setGeometry(QRect(20, 140, 121, 51));
         label_11->setFont(font1);
         label_11->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
@@ -499,7 +413,7 @@ public:
         num_demande = new QLineEdit(groupBox_2);
         num_demande->setObjectName(QStringLiteral("num_demande"));
         num_demande->setEnabled(true);
-        num_demande->setGeometry(QRect(210, 20, 221, 51));
+        num_demande->setGeometry(QRect(160, 20, 221, 51));
         QFont font3;
         font3.setFamily(QStringLiteral("Segoe UI"));
         font3.setPointSize(14);
@@ -517,7 +431,7 @@ public:
         id_client = new QLineEdit(groupBox_2);
         id_client->setObjectName(QStringLiteral("id_client"));
         id_client->setEnabled(true);
-        id_client->setGeometry(QRect(220, 370, 221, 51));
+        id_client->setGeometry(QRect(160, 320, 221, 51));
         id_client->setFont(font3);
         id_client->setAutoFillBackground(false);
         id_client->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -529,7 +443,7 @@ public:
         temps = new QLineEdit(groupBox_2);
         temps->setObjectName(QStringLiteral("temps"));
         temps->setEnabled(true);
-        temps->setGeometry(QRect(210, 80, 221, 51));
+        temps->setGeometry(QRect(160, 80, 221, 51));
         temps->setFont(font3);
         temps->setAutoFillBackground(false);
         temps->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -541,7 +455,7 @@ public:
         local = new QLineEdit(groupBox_2);
         local->setObjectName(QStringLiteral("local"));
         local->setEnabled(true);
-        local->setGeometry(QRect(220, 290, 221, 51));
+        local->setGeometry(QRect(160, 260, 221, 51));
         local->setFont(font3);
         local->setAutoFillBackground(false);
         local->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -553,7 +467,7 @@ public:
         montant = new QLineEdit(groupBox_2);
         montant->setObjectName(QStringLiteral("montant"));
         montant->setEnabled(true);
-        montant->setGeometry(QRect(220, 220, 221, 51));
+        montant->setGeometry(QRect(160, 200, 221, 51));
         montant->setFont(font3);
         montant->setAutoFillBackground(false);
         montant->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -565,7 +479,7 @@ public:
         distance = new QLineEdit(groupBox_2);
         distance->setObjectName(QStringLiteral("distance"));
         distance->setEnabled(true);
-        distance->setGeometry(QRect(210, 150, 221, 51));
+        distance->setGeometry(QRect(160, 140, 221, 51));
         distance->setFont(font3);
         distance->setAutoFillBackground(false);
         distance->setStyleSheet(QLatin1String("background-color: white;\n"
@@ -576,7 +490,7 @@ public:
 " "));
         bouton_annuler = new QPushButton(groupBox_2);
         bouton_annuler->setObjectName(QStringLiteral("bouton_annuler"));
-        bouton_annuler->setGeometry(QRect(740, 60, 161, 81));
+        bouton_annuler->setGeometry(QRect(230, 380, 161, 81));
         bouton_annuler->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
 " background-color: transparent;\n"
 " border-style: solid;\n"
@@ -590,7 +504,7 @@ public:
         bouton_annuler->setIcon(icon5);
         bouton_ajouter = new QPushButton(groupBox_2);
         bouton_ajouter->setObjectName(QStringLiteral("bouton_ajouter"));
-        bouton_ajouter->setGeometry(QRect(510, 60, 161, 81));
+        bouton_ajouter->setGeometry(QRect(30, 380, 161, 81));
         bouton_ajouter->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
 " background-color: transparent;\n"
 " border-style: solid;\n"
@@ -604,53 +518,53 @@ public:
         bouton_ajouter->setIcon(icon6);
         label_12 = new QLabel(groupBox_2);
         label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(40, 290, 121, 51));
+        label_12->setGeometry(QRect(20, 260, 121, 51));
         label_12->setFont(font1);
         label_12->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
-        label_15 = new QLabel(groupBox_2);
-        label_15->setObjectName(QStringLiteral("label_15"));
-        label_15->setGeometry(QRect(450, 170, 471, 251));
-        label_15->setStyleSheet(QLatin1String("background-color: transparent;\n"
-"border-style: transpaent;\n"
-" border-width:4px;\n"
-" border-radius:20px;\n"
-" border-color: cyan;"));
-        label_15->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
-        label_15->setScaledContents(true);
-        label_15->setWordWrap(false);
-        pushButton_22 = new QPushButton(page_6);
-        pushButton_22->setObjectName(QStringLiteral("pushButton_22"));
-        pushButton_22->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_22->setCheckable(true);
-        pushButton_23 = new QPushButton(page_6);
-        pushButton_23->setObjectName(QStringLiteral("pushButton_23"));
-        pushButton_23->setGeometry(QRect(20, 10, 111, 61));
-        pushButton_23->setCheckable(true);
-        label_31 = new QLabel(page_6);
-        label_31->setObjectName(QStringLiteral("label_31"));
-        label_31->setGeometry(QRect(590, 20, 371, 51));
-        label_31->setAlignment(Qt::AlignCenter);
-        stackedWidget_2->addWidget(page_6);
-        page_7 = new QWidget();
-        page_7->setObjectName(QStringLiteral("page_7"));
-        table_Localisation = new QTableView(page_7);
+        table_Localisation = new QTableView(groupBox_2);
         table_Localisation->setObjectName(QStringLiteral("table_Localisation"));
-        table_Localisation->setGeometry(QRect(20, 80, 1061, 761));
+        table_Localisation->setGeometry(QRect(440, 20, 881, 451));
         table_Localisation->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));"));
         table_Localisation->verticalHeader()->setVisible(false);
-        label_14 = new QLabel(page_7);
-        label_14->setObjectName(QStringLiteral("label_14"));
-        label_14->setGeometry(QRect(590, 20, 371, 51));
-        label_14->setAlignment(Qt::AlignCenter);
-        groupBox_3 = new QGroupBox(page_7);
+        groupBox_4 = new QGroupBox(groupBox_2);
+        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 480, 421, 261));
+        supprimer = new QLineEdit(groupBox_4);
+        supprimer->setObjectName(QStringLiteral("supprimer"));
+        supprimer->setEnabled(true);
+        supprimer->setGeometry(QRect(70, 60, 271, 51));
+        supprimer->setFont(font3);
+        supprimer->setAutoFillBackground(false);
+        supprimer->setStyleSheet(QLatin1String("background-color: white;\n"
+" border-style: solid;\n"
+" border-width:3px;\n"
+" border-radius:10px;\n"
+" border-color: lightgreen;\n"
+" "));
+        supprimer->setAlignment(Qt::AlignCenter);
+        bouton_supprimer = new QPushButton(groupBox_4);
+        bouton_supprimer->setObjectName(QStringLiteral("bouton_supprimer"));
+        bouton_supprimer->setGeometry(QRect(110, 140, 181, 81));
+        bouton_supprimer->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
+" background-color: transparent;\n"
+" border-style: solid;\n"
+" border-width:4px;\n"
+" border-radius:20px;\n"
+" border-color: cyan;\n"
+"selection-background-color: green;\n"
+"selection-color: rgb(98, 98, 98);"));
+        QIcon icon7;
+        icon7.addFile(QStringLiteral("../../../Downloads/red-delete-10437.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_supprimer->setIcon(icon7);
+        groupBox_3 = new QGroupBox(groupBox_2);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setGeometry(QRect(1090, 80, 551, 291));
+        groupBox_3->setGeometry(QRect(440, 480, 571, 261));
         groupBox_3->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.388601 rgba(0, 214, 226, 122), stop:1 rgba(0, 218, 197, 211));"));
         bouton_recherche = new QPushButton(groupBox_3);
         bouton_recherche->setObjectName(QStringLiteral("bouton_recherche"));
-        bouton_recherche->setGeometry(QRect(20, 150, 511, 81));
+        bouton_recherche->setGeometry(QRect(20, 150, 331, 81));
         bouton_recherche->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
 "background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));\n"
 " border-style: solid;\n"
@@ -659,9 +573,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon7;
-        icon7.addFile(QStringLiteral("../../../Downloads/search-2910.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_recherche->setIcon(icon7);
+        QIcon icon8;
+        icon8.addFile(QStringLiteral("../../../Downloads/search-2910.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_recherche->setIcon(icon8);
         le_recherche = new QLineEdit(groupBox_3);
         le_recherche->setObjectName(QStringLiteral("le_recherche"));
         le_recherche->setEnabled(true);
@@ -675,9 +589,9 @@ public:
 " border-color: lightgreen;\n"
 " "));
         le_recherche->setAlignment(Qt::AlignCenter);
-        bouton_tri = new QPushButton(page_7);
+        bouton_tri = new QPushButton(groupBox_3);
         bouton_tri->setObjectName(QStringLiteral("bouton_tri"));
-        bouton_tri->setGeometry(QRect(1310, 500, 171, 81));
+        bouton_tri->setGeometry(QRect(370, 150, 171, 81));
         bouton_tri->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
 "background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));\n"
 " border-style: solid;\n"
@@ -686,73 +600,68 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon8;
-        icon8.addFile(QStringLiteral("../../../Downloads/sort-ascending-6615.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_tri->setIcon(icon8);
-        pushButton_24 = new QPushButton(page_7);
-        pushButton_24->setObjectName(QStringLiteral("pushButton_24"));
-        pushButton_24->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_24->setCheckable(true);
-        pushButton_25 = new QPushButton(page_7);
-        pushButton_25->setObjectName(QStringLiteral("pushButton_25"));
-        pushButton_25->setGeometry(QRect(20, 10, 111, 61));
-        pushButton_25->setCheckable(true);
-        stackedWidget_2->addWidget(page_7);
-        page_8 = new QWidget();
-        page_8->setObjectName(QStringLiteral("page_8"));
-        groupBox_4 = new QGroupBox(page_8);
-        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setGeometry(QRect(60, 90, 421, 471));
-        supprimer = new QLineEdit(groupBox_4);
-        supprimer->setObjectName(QStringLiteral("supprimer"));
-        supprimer->setEnabled(true);
-        supprimer->setGeometry(QRect(70, 140, 271, 51));
-        supprimer->setFont(font3);
-        supprimer->setAutoFillBackground(false);
-        supprimer->setStyleSheet(QLatin1String("background-color: white;\n"
-" border-style: solid;\n"
-" border-width:3px;\n"
-" border-radius:10px;\n"
-" border-color: lightgreen;\n"
-" "));
-        supprimer->setAlignment(Qt::AlignCenter);
-        bouton_supprimer = new QPushButton(groupBox_4);
-        bouton_supprimer->setObjectName(QStringLiteral("bouton_supprimer"));
-        bouton_supprimer->setGeometry(QRect(110, 220, 181, 81));
-        bouton_supprimer->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
-" background-color: transparent;\n"
+        QIcon icon9;
+        icon9.addFile(QStringLiteral("../../../Downloads/sort-ascending-6615.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_tri->setIcon(icon9);
+        label_22 = new QLabel(groupBox_2);
+        label_22->setObjectName(QStringLiteral("label_22"));
+        label_22->setGeometry(QRect(1020, 480, 541, 261));
+        label_32 = new QLabel(groupBox_2);
+        label_32->setObjectName(QStringLiteral("label_32"));
+        label_32->setGeometry(QRect(1320, 310, 251, 141));
+        label_32->setStyleSheet(QLatin1String("background-color: transparent;\n"
+"border-style: transpaent;\n"
+" border-width:4px;\n"
+" border-radius:20px;\n"
+" border-color: cyan;"));
+        label_32->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
+        label_32->setScaledContents(true);
+        label_32->setWordWrap(false);
+        groupBox_6 = new QGroupBox(groupBox_2);
+        groupBox_6->setObjectName(QStringLiteral("groupBox_6"));
+        groupBox_6->setGeometry(QRect(1330, 20, 231, 231));
+        bouton_pdf = new QPushButton(groupBox_6);
+        bouton_pdf->setObjectName(QStringLiteral("bouton_pdf"));
+        bouton_pdf->setGeometry(QRect(40, 60, 151, 91));
+        bouton_pdf->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
+"background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));\n"
 " border-style: solid;\n"
 " border-width:4px;\n"
 " border-radius:20px;\n"
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon9;
-        icon9.addFile(QStringLiteral("../../../Downloads/red-delete-10437.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_supprimer->setIcon(icon9);
-        table_Localisations = new QTableView(page_8);
-        table_Localisations->setObjectName(QStringLiteral("table_Localisations"));
-        table_Localisations->setGeometry(QRect(500, 90, 1091, 751));
-        table_Localisations->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));"));
-        table_Localisations->verticalHeader()->setVisible(false);
-        pushButton_26 = new QPushButton(page_8);
-        pushButton_26->setObjectName(QStringLiteral("pushButton_26"));
-        pushButton_26->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_26->setCheckable(true);
-        pushButton_27 = new QPushButton(page_8);
-        pushButton_27->setObjectName(QStringLiteral("pushButton_27"));
-        pushButton_27->setGeometry(QRect(30, 20, 111, 61));
-        pushButton_27->setCheckable(true);
-        label_27 = new QLabel(page_8);
-        label_27->setObjectName(QStringLiteral("label_27"));
-        label_27->setGeometry(QRect(590, 20, 371, 51));
-        label_27->setAlignment(Qt::AlignCenter);
-        stackedWidget_2->addWidget(page_8);
-        page_9 = new QWidget();
-        page_9->setObjectName(QStringLiteral("page_9"));
-        groupBox_5 = new QGroupBox(page_9);
+        bouton_pdf->setIcon(icon9);
+        pushButton_22 = new QPushButton(page_1);
+        pushButton_22->setObjectName(QStringLiteral("pushButton_22"));
+        pushButton_22->setGeometry(QRect(1460, 10, 111, 61));
+        pushButton_22->setCheckable(true);
+        pushButton_23 = new QPushButton(page_1);
+        pushButton_23->setObjectName(QStringLiteral("pushButton_23"));
+        pushButton_23->setGeometry(QRect(20, 10, 111, 61));
+        pushButton_23->setCheckable(true);
+        label_31 = new QLabel(page_1);
+        label_31->setObjectName(QStringLiteral("label_31"));
+        label_31->setGeometry(QRect(590, 20, 371, 51));
+        label_31->setAlignment(Qt::AlignCenter);
+        stackedWidget_2->addWidget(page_1);
+        page_2 = new QWidget();
+        page_2->setObjectName(QStringLiteral("page_2"));
+        label_14 = new QLabel(page_2);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(590, 20, 371, 51));
+        label_14->setAlignment(Qt::AlignCenter);
+        pushButton_24 = new QPushButton(page_2);
+        pushButton_24->setObjectName(QStringLiteral("pushButton_24"));
+        pushButton_24->setGeometry(QRect(1460, 10, 111, 61));
+        pushButton_24->setCheckable(true);
+        pushButton_25 = new QPushButton(page_2);
+        pushButton_25->setObjectName(QStringLiteral("pushButton_25"));
+        pushButton_25->setGeometry(QRect(20, 10, 111, 61));
+        pushButton_25->setCheckable(true);
+        groupBox_5 = new QGroupBox(page_2);
         groupBox_5->setObjectName(QStringLiteral("groupBox_5"));
-        groupBox_5->setGeometry(QRect(40, 90, 1551, 751));
+        groupBox_5->setGeometry(QRect(10, 90, 821, 751));
         label_13 = new QLabel(groupBox_5);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(30, 20, 151, 51));
@@ -881,119 +790,68 @@ public:
         label_20->setStyleSheet(QLatin1String("font: 18pt \"Tw Cen MT\";\n"
 "border-color: rgb(0,0, 0, 0);\n"
 "background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));"));
-        pushButton_28 = new QPushButton(page_9);
-        pushButton_28->setObjectName(QStringLiteral("pushButton_28"));
-        pushButton_28->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_28->setCheckable(true);
-        pushButton_29 = new QPushButton(page_9);
-        pushButton_29->setObjectName(QStringLiteral("pushButton_29"));
-        pushButton_29->setGeometry(QRect(30, 10, 111, 61));
-        pushButton_29->setCheckable(true);
-        label_28 = new QLabel(page_9);
-        label_28->setObjectName(QStringLiteral("label_28"));
-        label_28->setGeometry(QRect(590, 20, 371, 51));
-        label_28->setAlignment(Qt::AlignCenter);
-        stackedWidget_2->addWidget(page_9);
-        page_10 = new QWidget();
-        page_10->setObjectName(QStringLiteral("page_10"));
-        gridLayout = new QGridLayout(page_10);
-        gridLayout->setSpacing(6);
-        gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        pushButton_31 = new QPushButton(page_10);
-        pushButton_31->setObjectName(QStringLiteral("pushButton_31"));
-        pushButton_31->setCheckable(true);
-
-        gridLayout->addWidget(pushButton_31, 0, 0, 1, 1);
-
-        pushButton_2 = new QPushButton(page_10);
+        table_Localisations = new QTableView(page_2);
+        table_Localisations->setObjectName(QStringLiteral("table_Localisations"));
+        table_Localisations->setGeometry(QRect(840, 90, 741, 751));
+        table_Localisations->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));"));
+        table_Localisations->verticalHeader()->setVisible(false);
+        stackedWidget_2->addWidget(page_2);
+        page_3 = new QWidget();
+        page_3->setObjectName(QStringLiteral("page_3"));
+        pushButton_27 = new QPushButton(page_3);
+        pushButton_27->setObjectName(QStringLiteral("pushButton_27"));
+        pushButton_27->setGeometry(QRect(30, 20, 111, 61));
+        pushButton_27->setCheckable(true);
+        label_27 = new QLabel(page_3);
+        label_27->setObjectName(QStringLiteral("label_27"));
+        label_27->setGeometry(QRect(590, 20, 371, 51));
+        label_27->setAlignment(Qt::AlignCenter);
+        label_30 = new QLabel(page_3);
+        label_30->setObjectName(QStringLiteral("label_30"));
+        label_30->setGeometry(QRect(110, 580, 291, 251));
+        label_30->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/robotic-arm-8193 (1).png")));
+        label_30->setScaledContents(true);
+        pushButton_4 = new QPushButton(page_3);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setGeometry(QRect(160, 520, 181, 51));
+        label_35 = new QLabel(page_3);
+        label_35->setObjectName(QStringLiteral("label_35"));
+        label_35->setGeometry(QRect(90, 140, 331, 91));
+        label_35->setAlignment(Qt::AlignCenter);
+        lineEdit = new QLineEdit(page_3);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(160, 420, 181, 41));
+        label_36 = new QLabel(page_3);
+        label_36->setObjectName(QStringLiteral("label_36"));
+        label_36->setGeometry(QRect(190, 250, 121, 121));
+        label_36->setStyleSheet(QLatin1String("border-color: transparent;\n"
+"background-color: qlineargradient(spread:reflect, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(0, 180, 218, 0), stop:0.896373 rgba(0, 248, 210, 0));"));
+        label_36->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/arrow-right-2817.png")));
+        label_36->setScaledContents(true);
+        groupBox_7 = new QGroupBox(page_3);
+        groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
+        groupBox_7->setGeometry(QRect(540, 110, 1031, 721));
+        calendarWidget = new QCalendarWidget(groupBox_7);
+        calendarWidget->setObjectName(QStringLiteral("calendarWidget"));
+        calendarWidget->setGeometry(QRect(20, 40, 1001, 661));
+        calendarWidget->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);selection-color: rgb(98, 98, 98);"));
+        stackedWidget_2->addWidget(page_3);
+        pushButton_2 = new QPushButton(page_001);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(320, 20, 61, 61));
+        QIcon icon11;
+        icon11.addFile(QStringLiteral("../../../Downloads/website-menu-green-circle-20588.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_2->setIcon(icon11);
+        pushButton_2->setIconSize(QSize(50, 50));
         pushButton_2->setCheckable(true);
-
-        gridLayout->addWidget(pushButton_2, 0, 1, 1, 1);
-
-        label_25 = new QLabel(page_10);
-        label_25->setObjectName(QStringLiteral("label_25"));
-        label_25->setAlignment(Qt::AlignCenter);
-
-        gridLayout->addWidget(label_25, 0, 2, 1, 1);
-
-        pushButton_30 = new QPushButton(page_10);
-        pushButton_30->setObjectName(QStringLiteral("pushButton_30"));
-        pushButton_30->setCheckable(true);
-
-        gridLayout->addWidget(pushButton_30, 0, 3, 1, 1);
-
-        groupBox_6 = new QGroupBox(page_10);
-        groupBox_6->setObjectName(QStringLiteral("groupBox_6"));
-        bouton_pdf = new QPushButton(groupBox_6);
-        bouton_pdf->setObjectName(QStringLiteral("bouton_pdf"));
-        bouton_pdf->setGeometry(QRect(110, 70, 271, 81));
-        bouton_pdf->setStyleSheet(QLatin1String("font: 16pt \"Tw Cen MT Condensed Extra Bold\";\n"
-"background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));\n"
-" border-style: solid;\n"
-" border-width:4px;\n"
-" border-radius:20px;\n"
-" border-color: cyan;\n"
-"selection-background-color: green;\n"
-"selection-color: rgb(98, 98, 98);"));
-        bouton_pdf->setIcon(icon8);
-        label_21 = new QLabel(groupBox_6);
-        label_21->setObjectName(QStringLiteral("label_21"));
-        label_21->setGeometry(QRect(40, 160, 321, 191));
-        label_21->setStyleSheet(QLatin1String("background-color: transparent;\n"
-"border-style: transpaent;\n"
-" border-width:4px;\n"
-" border-radius:20px;\n"
-" border-color: cyan;"));
-        label_21->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
-        label_21->setScaledContents(true);
-        label_21->setWordWrap(false);
-
-        gridLayout->addWidget(groupBox_6, 1, 0, 1, 2);
-
-        toolBox = new QToolBox(page_10);
-        toolBox->setObjectName(QStringLiteral("toolBox"));
-        page_11 = new QWidget();
-        page_11->setObjectName(QStringLiteral("page_11"));
-        page_11->setGeometry(QRect(0, 0, 289, 83));
-        tab_2 = new QTableView(page_11);
-        tab_2->setObjectName(QStringLiteral("tab_2"));
-        tab_2->setGeometry(QRect(10, 10, 1011, 631));
-#ifndef QT_NO_TOOLTIP
-        tab_2->setToolTip(QStringLiteral(""));
-#endif // QT_NO_TOOLTIP
-        tab_2->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.241758, y1:0.283773, x2:1, y2:1, stop:0.378238 rgba(0, 241, 255, 93), stop:1 rgba(0, 255, 231, 255));"));
-        tab_2->setFrameShape(QFrame::Box);
-        tab_2->setShowGrid(true);
-        tab_2->setGridStyle(Qt::CustomDashLine);
-        tab_2->setCornerButtonEnabled(false);
-        tab_2->horizontalHeader()->setVisible(false);
-        tab_2->horizontalHeader()->setCascadingSectionResizes(true);
-        tab_2->horizontalHeader()->setHighlightSections(true);
-        tab_2->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
-        tab_2->horizontalHeader()->setStretchLastSection(true);
-        tab_2->verticalHeader()->setVisible(false);
-        toolBox->addItem(page_11, QStringLiteral("FICHIER PDF"));
-        page_12 = new QWidget();
-        page_12->setObjectName(QStringLiteral("page_12"));
-        page_12->setGeometry(QRect(0, 0, 289, 83));
-        label_22 = new QLabel(page_12);
-        label_22->setObjectName(QStringLiteral("label_22"));
-        label_22->setGeometry(QRect(10, 10, 1001, 631));
-        toolBox->addItem(page_12, QStringLiteral("STATISTICS"));
-
-        gridLayout->addWidget(toolBox, 1, 2, 1, 2);
-
-        stackedWidget_2->addWidget(page_10);
-        pushButton_3 = new QPushButton(page_2);
+        pushButton_3 = new QPushButton(page_001);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(1750, 20, 121, 61));
-        stackedWidget->addWidget(page_2);
+        stackedWidget->addWidget(page_001);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1920, 42));
+        menuBar->setGeometry(QRect(0, 0, 1920, 37));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -1003,12 +861,12 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
-        QObject::connect(pushButton_2, SIGNAL(toggled(bool)), widget, SLOT(setVisible(bool)));
         QObject::connect(pushButton_2, SIGNAL(toggled(bool)), widget_2, SLOT(setHidden(bool)));
+        QObject::connect(pushButton_2, SIGNAL(toggled(bool)), widget, SLOT(setVisible(bool)));
+        QObject::connect(pushButton_6, SIGNAL(clicked()), pushButton_14, SLOT(click()));
 
         stackedWidget->setCurrentIndex(1);
-        stackedWidget_2->setCurrentIndex(7);
-        toolBox->setCurrentIndex(1);
+        stackedWidget_2->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1039,22 +897,10 @@ public:
         pushButton_12->setText(QApplication::translate("MainWindow", "maintenance", Q_NULLPTR));
         pushButton_13->setText(QApplication::translate("MainWindow", "clients", Q_NULLPTR));
         pushButton_14->setText(QApplication::translate("MainWindow", "localisation", Q_NULLPTR));
-        label_4->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
-        label_5->setText(QApplication::translate("MainWindow", "TextLabel", Q_NULLPTR));
         pushButton_17->setText(QApplication::translate("MainWindow", "return", Q_NULLPTR));
         label->setText(QString());
         pushButton_16->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
         label_26->setText(QString());
-        label_23->setText(QApplication::translate("MainWindow", "Calendrier des demande avec promotion", Q_NULLPTR));
-        pushButton_18->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        pushButton_19->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        label_35->setText(QString());
-        label_36->setText(QString());
-        pushButton_4->setText(QApplication::translate("MainWindow", "VALIDER", Q_NULLPTR));
-        pushButton_20->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        pushButton_21->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        label_29->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
-        label_30->setText(QString());
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Ajout", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "N demande", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindow", "Montant", Q_NULLPTR));
@@ -1070,25 +916,25 @@ public:
         bouton_annuler->setText(QApplication::translate("MainWindow", "ANNULER", Q_NULLPTR));
         bouton_ajouter->setText(QApplication::translate("MainWindow", "AJOUTER", Q_NULLPTR));
         label_12->setText(QApplication::translate("MainWindow", "local", Q_NULLPTR));
-        label_15->setText(QString());
-        pushButton_22->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
-        pushButton_23->setText(QString());
-        label_31->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
-        label_14->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
+        groupBox_4->setTitle(QApplication::translate("MainWindow", "Suppression", Q_NULLPTR));
+        supprimer->setText(QString());
+        supprimer->setPlaceholderText(QApplication::translate("MainWindow", "NUM DEMANDE", Q_NULLPTR));
+        bouton_supprimer->setText(QApplication::translate("MainWindow", "SUPPRIMER", Q_NULLPTR));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "Recherche", Q_NULLPTR));
         bouton_recherche->setText(QApplication::translate("MainWindow", "CHERCHER", Q_NULLPTR));
         le_recherche->setText(QString());
         le_recherche->setPlaceholderText(QApplication::translate("MainWindow", "NUM DEMANDE", Q_NULLPTR));
         bouton_tri->setText(QApplication::translate("MainWindow", "TRI", Q_NULLPTR));
+        label_22->setText(QString());
+        label_32->setText(QString());
+        groupBox_6->setTitle(QApplication::translate("MainWindow", "GENERATION PDF", Q_NULLPTR));
+        bouton_pdf->setText(QApplication::translate("MainWindow", "GENERER", Q_NULLPTR));
+        pushButton_22->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
+        pushButton_23->setText(QApplication::translate("MainWindow", "privious", Q_NULLPTR));
+        label_31->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
+        label_14->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
         pushButton_24->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
-        pushButton_25->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        groupBox_4->setTitle(QApplication::translate("MainWindow", "Suppression", Q_NULLPTR));
-        supprimer->setText(QString());
-        supprimer->setPlaceholderText(QApplication::translate("MainWindow", "NUM DEMANDE", Q_NULLPTR));
-        bouton_supprimer->setText(QApplication::translate("MainWindow", "SUPPRIMER", Q_NULLPTR));
-        pushButton_26->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        pushButton_27->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        label_27->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
+        pushButton_25->setText(QApplication::translate("MainWindow", "privious", Q_NULLPTR));
         groupBox_5->setTitle(QApplication::translate("MainWindow", "Modification", Q_NULLPTR));
         label_13->setText(QApplication::translate("MainWindow", "N demande", Q_NULLPTR));
         label_16->setText(QApplication::translate("MainWindow", "Montant", Q_NULLPTR));
@@ -1103,19 +949,14 @@ public:
         distance_2->setText(QString());
         bouton_modifier->setText(QApplication::translate("MainWindow", "MODIFIER", Q_NULLPTR));
         label_20->setText(QApplication::translate("MainWindow", "local", Q_NULLPTR));
-        pushButton_28->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        pushButton_29->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
-        label_28->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
-        pushButton_31->setText(QApplication::translate("MainWindow", "vbcvb", Q_NULLPTR));
+        pushButton_27->setText(QApplication::translate("MainWindow", "previous", Q_NULLPTR));
+        label_27->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
+        label_30->setText(QString());
+        pushButton_4->setText(QApplication::translate("MainWindow", "VALIDER", Q_NULLPTR));
+        label_35->setText(QString());
+        label_36->setText(QString());
+        groupBox_7->setTitle(QApplication::translate("MainWindow", "calendrier", Q_NULLPTR));
         pushButton_2->setText(QString());
-        label_25->setText(QApplication::translate("MainWindow", "Demandes de localisation", Q_NULLPTR));
-        pushButton_30->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
-        groupBox_6->setTitle(QApplication::translate("MainWindow", "GENERATION", Q_NULLPTR));
-        bouton_pdf->setText(QApplication::translate("MainWindow", "GENERER", Q_NULLPTR));
-        label_21->setText(QString());
-        toolBox->setItemText(toolBox->indexOf(page_11), QApplication::translate("MainWindow", "FICHIER PDF", Q_NULLPTR));
-        label_22->setText(QString());
-        toolBox->setItemText(toolBox->indexOf(page_12), QApplication::translate("MainWindow", "STATISTICS", Q_NULLPTR));
         pushButton_3->setText(QString());
     } // retranslateUi
 

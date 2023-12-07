@@ -30,6 +30,46 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    int ret=A.connect_arduino(); // lancer la connexion à arduino
+            switch(ret){
+            case(0):qDebug()<< "arduino is available and connected to : "<< A.getarduino_port_name();
+                break;
+            case(1):qDebug() << "arduino is available but not connected to :" <<A.getarduino_port_name();
+               break;
+            case(-1):qDebug() << "arduino is not available";
+            }
+             QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_label())); // permet de lancer
+             //le slot update_label suite à la reception du signal readyRead (reception des données).
+
+
+    QBarSet *set0 = new QBarSet("demandes SOUSSE");
+    QBarSet *set1 = new QBarSet("demandes TUNIS ");
+    QBarSet *set2 = new QBarSet("demandes MANOUBA");
+    QBarSet *set3 = new QBarSet("demandes ARIANA");
+        * set0 << 40<<100 ;
+        * set1 << 50<<100  ;
+        * set2 << 30<<100  ;
+        * set3 << 70<<100  ;
+
+        QBarSeries *series = new QBarSeries();
+        series->append(set0);
+        series->append(set1);
+        series->append(set2);
+        series->append(set3);
+        QChart *chart = new QChart();
+        chart->addSeries(series);
+        chart->setTitle("DEMANDES");
+        chart->setAnimationOptions(QChart:: SeriesAnimations);
+        chart->resize(530,350);
+        QStringList categories;
+        categories << " Num demandes" ;
+        QBarCategoryAxis *axis = new QBarCategoryAxis();
+        axis->append(categories);
+        chart->createDefaultAxes();
+        chart->setAxisX(axis,series);
+        QChartView *chartView = new QChartView(chart);
+        chartView->setParent(ui->label_22);
 }
 
 MainWindow::~MainWindow()
@@ -37,30 +77,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_22_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(2);
-}
-
-void MainWindow::on_pushButton_24_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(3);
-}
-
-void MainWindow::on_pushButton_26_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(4);
-}
-
-void MainWindow::on_pushButton_28_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(5);
-}
-
-void MainWindow::on_pushButton_30_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(6);
-}
 
 
 void MainWindow::on_bouton_ajouter_clicked()
@@ -80,7 +96,6 @@ void MainWindow::on_bouton_ajouter_clicked()
 
     if (test){
         ui->table_Localisation->setModel(L.afficher());
-        ui->tab_2->setModel(L.afficher());
         QMessageBox::information(nullptr,QObject::tr("OK"),
                                   QObject::tr("Ajout effectue\n"
                                               "Click Cancel to exit"),QMessageBox::Cancel);
@@ -90,7 +105,6 @@ void MainWindow::on_bouton_ajouter_clicked()
 
     else{
         ui->table_Localisation->setModel(L.afficher());
-        ui->tab_2->setModel(L.afficher());
 
         QMessageBox::critical(nullptr,QObject::tr("NOT OK"),
                                   QObject::tr("Ajout non effectue\n"
@@ -142,14 +156,12 @@ void MainWindow::on_bouton_modifier_clicked()
         msgBox.setText("Modification avec succes.");
         ui->table_Localisation->setModel(L.afficher());
         ui->table_Localisations->setModel(L.afficher());
-        ui->tab_2->setModel(L.afficher());
     }
     else
         msgBox.setText("Echec de Modification.");
         msgBox.exec();
         ui->table_Localisation->setModel(L.afficher());
         ui->table_Localisations->setModel(L.afficher());
-        ui->tab_2->setModel(L.afficher());
 
 }
 
@@ -190,7 +202,6 @@ void MainWindow::on_bouton_recherche_clicked()
     {
         ui->table_Localisation->setModel(L.afficher());
         ui->table_Localisations->setModel(L.afficher());
-        ui->tab_2->setModel(L.afficher());
     }
 }
 
@@ -215,7 +226,6 @@ void MainWindow::on_bouton_annuler_2_clicked()
 
 void MainWindow::on_bouton_pdf_clicked()
 {
-    ui->tab_2->setModel(L.afficher());
 
     QPdfWriter pdf("C:/Users/yassine/Desktop/PDF_projet/pdf");
     int i = 4000;
@@ -383,6 +393,57 @@ void MainWindow::on_pushButton_7_clicked()
 }
 
 void MainWindow::on_pushButton_14_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+
+}
+
+void MainWindow::on_pushButton_16_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(1);
+}
+
+
+void MainWindow::on_pushButton_22_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+}
+
+void MainWindow::on_pushButton_24_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(3);
+}
+
+void MainWindow::on_pushButton_26_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(4);
+}
+
+void MainWindow::on_pushButton_28_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(5);
+}
+
+void MainWindow::on_pushButton_30_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(6);
+}
+
+
+void MainWindow::on_pushButton_27_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(2);
+
+
+}
+
+void MainWindow::on_pushButton_23_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(0);
+
+}
+
+void MainWindow::on_pushButton_25_clicked()
 {
     ui->stackedWidget_2->setCurrentIndex(1);
 

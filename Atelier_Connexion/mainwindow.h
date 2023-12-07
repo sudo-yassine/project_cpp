@@ -66,6 +66,14 @@ private slots:
 
      void on_pushButton_14_clicked();
 
+     void on_pushButton_16_clicked();
+
+     void on_pushButton_27_clicked();
+
+     void on_pushButton_23_clicked();
+
+     void on_pushButton_25_clicked();
+
 private:
      Ui::MainWindow *ui;
      Localisation L;
