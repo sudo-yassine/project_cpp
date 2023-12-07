@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 #include "arduino.h"
 #include "localisation.h"
+#include"maintenance.h"
+
 #include <QMainWindow>
 #include<QtCharts>
 //#include "calendrier.h"
@@ -24,6 +26,7 @@ public:
     ~MainWindow();
 
 private slots:
+
     void on_pushButton_22_clicked();
 
     void on_pushButton_24_clicked();
@@ -73,12 +76,39 @@ private slots:
      void on_pushButton_23_clicked();
 
      void on_pushButton_25_clicked();
+     //////
+     void on_pb_Ajouter_clicked();
+
+     void on_pb_Supprimer_clicked();
+
+     void on_pb_mod_clicked();
+
+     void on_pb_chercher_clicked();
+
+     void on_pb_tri_clicked();
+
+     void on_pb_pdf_clicked();
+
+     void on_tabWidget_currentChanged(int index);
+
+     //void on_pb_stat_clicked();
+
+     //void on_le_stat_linkActivated(const QString &link);
+
+     void on_pb_histo_clicked();
+
+
+     void on_stat_clicked();
+
+     void on_pushButton_12_clicked();
 
 private:
      Ui::MainWindow *ui;
      Localisation L;
      Arduino A;
      QByteArray data;
+     Maintenance M;
+
 };
 
 #endif // MAINWINDOW_H

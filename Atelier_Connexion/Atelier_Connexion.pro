@@ -30,12 +30,14 @@ SOURCES += \
     arduino.cpp \
     localisation.cpp \
         main.cpp \
+    maintenance.cpp \
         mainwindow.cpp \
     connection.cpp
 
 HEADERS += \
     arduino.h \
     localisation.h \
+    maintenance.h \
         mainwindow.h \
     connection.h
 
