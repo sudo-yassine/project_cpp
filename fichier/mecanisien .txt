@@ -1,0 +1,13 @@
+mecanisien 
+electricien
+employe
+
+every 10 jobs they get an offre 15% of there salary 
+check jobs per months 
+mes variables : 
+travail : entier 
+SPT : entier
+bonous : float 
+total : float
+
+

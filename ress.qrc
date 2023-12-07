@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/ress">
+        <file>background.png</file>
+        <file>BACK.png</file>
+        <file>logo projet w.png</file>
+        <file>test.png</file>
+    </qresource>
+</RCC>
