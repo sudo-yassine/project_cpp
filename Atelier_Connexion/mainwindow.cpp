@@ -211,7 +211,6 @@ void MainWindow::on_bouton_annuler_2_clicked()
         ui->temps_2->clear();
         ui->id_client_2->clear();
         ui->local_2->clear();
-        ui->etat_2->clear();
 }
 
 void MainWindow::on_bouton_pdf_clicked()
