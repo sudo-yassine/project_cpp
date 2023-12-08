@@ -404,10 +404,6 @@ void MainWindow::on_pushButton_14_clicked()
 
 }
 
-void MainWindow::on_pushButton_16_clicked()
-{
-    ui->stackedWidget_2->setCurrentIndex(1);
-}
 
 
 void MainWindow::on_pushButton_22_clicked()
@@ -700,5 +696,11 @@ void MainWindow::on_stat_clicked()
 void MainWindow::on_pushButton_12_clicked()
 {
     ui->stackedWidget_2->setCurrentIndex(4);
+
+}
+
+void MainWindow::on_pushButton_17_clicked()
+{
+    ui->stackedWidget_2->setCurrentIndex(0);
 
 }

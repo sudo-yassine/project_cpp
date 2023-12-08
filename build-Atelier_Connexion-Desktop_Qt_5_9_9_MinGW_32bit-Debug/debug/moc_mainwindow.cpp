@@ -53,21 +53,21 @@ QT_MOC_LITERAL(18, 388, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(19, 410, 24), // "on_pushButton_20_clicked"
 QT_MOC_LITERAL(20, 435, 23), // "on_pushButton_7_clicked"
 QT_MOC_LITERAL(21, 459, 24), // "on_pushButton_14_clicked"
-QT_MOC_LITERAL(22, 484, 24), // "on_pushButton_16_clicked"
-QT_MOC_LITERAL(23, 509, 24), // "on_pushButton_27_clicked"
-QT_MOC_LITERAL(24, 534, 24), // "on_pushButton_23_clicked"
-QT_MOC_LITERAL(25, 559, 24), // "on_pushButton_25_clicked"
-QT_MOC_LITERAL(26, 584, 21), // "on_pb_Ajouter_clicked"
-QT_MOC_LITERAL(27, 606, 23), // "on_pb_Supprimer_clicked"
-QT_MOC_LITERAL(28, 630, 17), // "on_pb_mod_clicked"
-QT_MOC_LITERAL(29, 648, 22), // "on_pb_chercher_clicked"
-QT_MOC_LITERAL(30, 671, 17), // "on_pb_tri_clicked"
-QT_MOC_LITERAL(31, 689, 17), // "on_pb_pdf_clicked"
-QT_MOC_LITERAL(32, 707, 27), // "on_tabWidget_currentChanged"
-QT_MOC_LITERAL(33, 735, 5), // "index"
-QT_MOC_LITERAL(34, 741, 19), // "on_pb_histo_clicked"
-QT_MOC_LITERAL(35, 761, 15), // "on_stat_clicked"
-QT_MOC_LITERAL(36, 777, 24) // "on_pushButton_12_clicked"
+QT_MOC_LITERAL(22, 484, 24), // "on_pushButton_27_clicked"
+QT_MOC_LITERAL(23, 509, 24), // "on_pushButton_23_clicked"
+QT_MOC_LITERAL(24, 534, 24), // "on_pushButton_25_clicked"
+QT_MOC_LITERAL(25, 559, 21), // "on_pb_Ajouter_clicked"
+QT_MOC_LITERAL(26, 581, 23), // "on_pb_Supprimer_clicked"
+QT_MOC_LITERAL(27, 605, 17), // "on_pb_mod_clicked"
+QT_MOC_LITERAL(28, 623, 22), // "on_pb_chercher_clicked"
+QT_MOC_LITERAL(29, 646, 17), // "on_pb_tri_clicked"
+QT_MOC_LITERAL(30, 664, 17), // "on_pb_pdf_clicked"
+QT_MOC_LITERAL(31, 682, 27), // "on_tabWidget_currentChanged"
+QT_MOC_LITERAL(32, 710, 5), // "index"
+QT_MOC_LITERAL(33, 716, 19), // "on_pb_histo_clicked"
+QT_MOC_LITERAL(34, 736, 15), // "on_stat_clicked"
+QT_MOC_LITERAL(35, 752, 24), // "on_pushButton_12_clicked"
+QT_MOC_LITERAL(36, 777, 24) // "on_pushButton_17_clicked"
 
     },
     "MainWindow\0on_pushButton_22_clicked\0"
@@ -86,7 +86,6 @@ QT_MOC_LITERAL(36, 777, 24) // "on_pushButton_12_clicked"
     "on_pushButton_20_clicked\0"
     "on_pushButton_7_clicked\0"
     "on_pushButton_14_clicked\0"
-    "on_pushButton_16_clicked\0"
     "on_pushButton_27_clicked\0"
     "on_pushButton_23_clicked\0"
     "on_pushButton_25_clicked\0on_pb_Ajouter_clicked\0"
@@ -94,7 +93,8 @@ QT_MOC_LITERAL(36, 777, 24) // "on_pushButton_12_clicked"
     "on_pb_chercher_clicked\0on_pb_tri_clicked\0"
     "on_pb_pdf_clicked\0on_tabWidget_currentChanged\0"
     "index\0on_pb_histo_clicked\0on_stat_clicked\0"
-    "on_pushButton_12_clicked"
+    "on_pushButton_12_clicked\0"
+    "on_pushButton_17_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -140,8 +140,8 @@ static const uint qt_meta_data_MainWindow[] = {
       28,    0,  206,    2, 0x08 /* Private */,
       29,    0,  207,    2, 0x08 /* Private */,
       30,    0,  208,    2, 0x08 /* Private */,
-      31,    0,  209,    2, 0x08 /* Private */,
-      32,    1,  210,    2, 0x08 /* Private */,
+      31,    1,  209,    2, 0x08 /* Private */,
+      33,    0,  212,    2, 0x08 /* Private */,
       34,    0,  213,    2, 0x08 /* Private */,
       35,    0,  214,    2, 0x08 /* Private */,
       36,    0,  215,    2, 0x08 /* Private */,
@@ -175,8 +175,8 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   32,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   33,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -209,20 +209,20 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 16: _t->on_pushButton_20_clicked(); break;
         case 17: _t->on_pushButton_7_clicked(); break;
         case 18: _t->on_pushButton_14_clicked(); break;
-        case 19: _t->on_pushButton_16_clicked(); break;
-        case 20: _t->on_pushButton_27_clicked(); break;
-        case 21: _t->on_pushButton_23_clicked(); break;
-        case 22: _t->on_pushButton_25_clicked(); break;
-        case 23: _t->on_pb_Ajouter_clicked(); break;
-        case 24: _t->on_pb_Supprimer_clicked(); break;
-        case 25: _t->on_pb_mod_clicked(); break;
-        case 26: _t->on_pb_chercher_clicked(); break;
-        case 27: _t->on_pb_tri_clicked(); break;
-        case 28: _t->on_pb_pdf_clicked(); break;
-        //case 29: _t->on_tabWidget_currentChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 30: _t->on_pb_histo_clicked(); break;
-        case 31: _t->on_stat_clicked(); break;
-        case 32: _t->on_pushButton_12_clicked(); break;
+        case 19: _t->on_pushButton_27_clicked(); break;
+        case 20: _t->on_pushButton_23_clicked(); break;
+        case 21: _t->on_pushButton_25_clicked(); break;
+        case 22: _t->on_pb_Ajouter_clicked(); break;
+        case 23: _t->on_pb_Supprimer_clicked(); break;
+        case 24: _t->on_pb_mod_clicked(); break;
+        case 25: _t->on_pb_chercher_clicked(); break;
+        case 26: _t->on_pb_tri_clicked(); break;
+        case 27: _t->on_pb_pdf_clicked(); break;
+        //case 28: _t->on_tabWidget_currentChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 29: _t->on_pb_histo_clicked(); break;
+        case 30: _t->on_stat_clicked(); break;
+        case 31: _t->on_pushButton_12_clicked(); break;
+        case 32: _t->on_pushButton_17_clicked(); break;
         default: ;
         }
     }

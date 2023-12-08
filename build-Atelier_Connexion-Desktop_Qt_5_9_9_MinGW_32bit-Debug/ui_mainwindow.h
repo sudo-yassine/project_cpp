@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCalendarWidget>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -44,13 +45,7 @@ public:
     QLabel *label_24;
     QWidget *page_001;
     QWidget *widget;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_8;
-    QPushButton *pushButton_9;
-    QPushButton *pushButton_15;
-    QLabel *label_6;
+    QGridLayout *gridLayout;
     QWidget *widget_2;
     QPushButton *pushButton_10;
     QPushButton *pushButton_11;
@@ -62,8 +57,9 @@ public:
     QStackedWidget *stackedWidget_2;
     QWidget *page_0;
     QLabel *label;
-    QPushButton *pushButton_16;
     QLabel *label_26;
+    QPushButton *pushButton_2;
+    QLabel *label_74;
     QWidget *page_1;
     QGroupBox *groupBox_2;
     QLabel *label_7;
@@ -163,8 +159,14 @@ public:
     QPushButton *pb_mod;
     QPushButton *pb_tri;
     QPushButton *stat;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QWidget *widget1;
+    QPushButton *pushButton_5;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_7;
+    QPushButton *pushButton_8;
+    QPushButton *pushButton_9;
+    QPushButton *pushButton_15;
+    QLabel *label_6;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -286,78 +288,32 @@ public:
         page_001->setObjectName(QStringLiteral("page_001"));
         widget = new QWidget(page_001);
         widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 10, 81, 941));
-        pushButton_5 = new QPushButton(widget);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setGeometry(QRect(10, 310, 61, 61));
-        QIcon icon;
-        icon.addFile(QStringLiteral("../../../Downloads/repair-tool-5840.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_5->setIcon(icon);
-        pushButton_5->setIconSize(QSize(50, 50));
-        pushButton_5->setCheckable(true);
-        pushButton_5->setAutoExclusive(true);
-        pushButton_6 = new QPushButton(widget);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setGeometry(QRect(10, 430, 61, 61));
-        QIcon icon1;
-        icon1.addFile(QStringLiteral("../../../Downloads/globe-gps-red-navigation-sign-15947.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_6->setIcon(icon1);
-        pushButton_6->setIconSize(QSize(50, 50));
-        pushButton_6->setCheckable(true);
-        pushButton_6->setAutoExclusive(true);
-        pushButton_7 = new QPushButton(widget);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setGeometry(QRect(10, 840, 61, 61));
-        pushButton_7->setCheckable(true);
-        pushButton_7->setAutoExclusive(true);
-        pushButton_8 = new QPushButton(widget);
-        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
-        pushButton_8->setGeometry(QRect(10, 190, 61, 61));
-        QIcon icon2;
-        icon2.addFile(QStringLiteral("../../../Downloads/user-group-296.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_8->setIcon(icon2);
-        pushButton_8->setIconSize(QSize(40404, 40));
-        pushButton_8->setCheckable(true);
-        pushButton_8->setAutoExclusive(true);
-        pushButton_9 = new QPushButton(widget);
-        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
-        pushButton_9->setGeometry(QRect(10, 80, 61, 61));
-        QIcon icon3;
-        icon3.addFile(QStringLiteral("../../../Downloads/businessman-309.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_9->setIcon(icon3);
-        pushButton_9->setIconSize(QSize(50, 50));
-        pushButton_9->setCheckable(true);
-        pushButton_9->setAutoExclusive(true);
-        pushButton_15 = new QPushButton(widget);
-        pushButton_15->setObjectName(QStringLiteral("pushButton_15"));
-        pushButton_15->setGeometry(QRect(10, 540, 61, 61));
-        QIcon icon4;
-        icon4.addFile(QStringLiteral("../../../Downloads/car-fleet-12792.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_15->setIcon(icon4);
-        pushButton_15->setIconSize(QSize(50, 50));
-        pushButton_15->setCheckable(true);
-        pushButton_15->setAutoExclusive(true);
-        label_6 = new QLabel(widget);
-        label_6->setObjectName(QStringLiteral("label_6"));
-        label_6->setGeometry(QRect(10, 10, 61, 51));
-        label_6->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
-        label_6->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/370293604_1773005379805812_53322258381366709_n-removebg-preview (1).png")));
-        label_6->setScaledContents(true);
-        widget_2 = new QWidget(page_001);
+        widget->setGeometry(QRect(10, 10, 1953, 943));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        widget_2 = new QWidget(widget);
         widget_2->setObjectName(QStringLiteral("widget_2"));
-        widget_2->setGeometry(QRect(100, 10, 191, 941));
+        widget_2->setMinimumSize(QSize(191, 941));
+        widget_2->setMaximumSize(QSize(16777215, 941));
         pushButton_10 = new QPushButton(widget_2);
         pushButton_10->setObjectName(QStringLiteral("pushButton_10"));
         pushButton_10->setGeometry(QRect(10, 80, 171, 61));
         pushButton_10->setMinimumSize(QSize(121, 61));
         pushButton_10->setMaximumSize(QSize(55521, 555));
-        pushButton_10->setIcon(icon3);
+        QIcon icon;
+        icon.addFile(QStringLiteral("../../../Downloads/businessman-309.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_10->setIcon(icon);
         pushButton_10->setCheckable(true);
         pushButton_10->setAutoExclusive(true);
         pushButton_11 = new QPushButton(widget_2);
         pushButton_11->setObjectName(QStringLiteral("pushButton_11"));
         pushButton_11->setGeometry(QRect(10, 540, 171, 61));
-        pushButton_11->setIcon(icon4);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral("../../../Downloads/car-fleet-12792.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_11->setIcon(icon1);
         pushButton_11->setIconSize(QSize(30, 20));
         pushButton_11->setCheckable(true);
         pushButton_11->setAutoExclusive(true);
@@ -365,13 +321,17 @@ public:
         pushButton_12->setObjectName(QStringLiteral("pushButton_12"));
         pushButton_12->setGeometry(QRect(10, 310, 171, 61));
         pushButton_12->setMinimumSize(QSize(121, 61));
-        pushButton_12->setIcon(icon);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral("../../../Downloads/repair-tool-5840.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_12->setIcon(icon2);
         pushButton_12->setCheckable(true);
         pushButton_12->setAutoExclusive(true);
         pushButton_13 = new QPushButton(widget_2);
         pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
         pushButton_13->setGeometry(QRect(10, 190, 171, 61));
-        pushButton_13->setIcon(icon2);
+        QIcon icon3;
+        icon3.addFile(QStringLiteral("../../../Downloads/user-group-296.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_13->setIcon(icon3);
         pushButton_13->setCheckable(true);
         pushButton_13->setAutoExclusive(true);
         pushButton_14 = new QPushButton(widget_2);
@@ -379,7 +339,9 @@ public:
         pushButton_14->setGeometry(QRect(10, 430, 171, 61));
         pushButton_14->setMinimumSize(QSize(121, 61));
         pushButton_14->setMaximumSize(QSize(500, 5555));
-        pushButton_14->setIcon(icon1);
+        QIcon icon4;
+        icon4.addFile(QStringLiteral("../../../Downloads/globe-gps-red-navigation-sign-15947.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_14->setIcon(icon4);
         pushButton_14->setCheckable(true);
         pushButton_14->setAutoExclusive(true);
         pushButton_17 = new QPushButton(widget_2);
@@ -391,18 +353,18 @@ public:
         label_15->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
         label_15->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/370293604_1773005379805812_53322258381366709_n-removebg-preview (1).png")));
         label_15->setScaledContents(true);
-        stackedWidget_2 = new QStackedWidget(page_001);
+
+        gridLayout->addWidget(widget_2, 0, 1, 1, 1);
+
+        stackedWidget_2 = new QStackedWidget(widget);
         stackedWidget_2->setObjectName(QStringLiteral("stackedWidget_2"));
-        stackedWidget_2->setGeometry(QRect(290, 90, 1601, 861));
+        stackedWidget_2->setMinimumSize(QSize(1601, 861));
+        stackedWidget_2->setMaximumSize(QSize(16777215, 861));
         page_0 = new QWidget();
         page_0->setObjectName(QStringLiteral("page_0"));
         label = new QLabel(page_0);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(310, 180, 971, 431));
-        pushButton_16 = new QPushButton(page_0);
-        pushButton_16->setObjectName(QStringLiteral("pushButton_16"));
-        pushButton_16->setGeometry(QRect(1460, 10, 111, 61));
-        pushButton_16->setCheckable(true);
         label_26 = new QLabel(page_0);
         label_26->setObjectName(QStringLiteral("label_26"));
         label_26->setGeometry(QRect(550, 290, 471, 251));
@@ -414,6 +376,18 @@ public:
         label_26->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/wetransfer_logo-projet-w-png_2023-11-02_1739/logo projetcolored.png")));
         label_26->setScaledContents(true);
         label_26->setWordWrap(false);
+        pushButton_2 = new QPushButton(page_0);
+        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setGeometry(QRect(20, 20, 61, 61));
+        QIcon icon5;
+        icon5.addFile(QStringLiteral("../../../Downloads/website-menu-green-circle-20588.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButton_2->setIcon(icon5);
+        pushButton_2->setIconSize(QSize(50, 50));
+        pushButton_2->setCheckable(true);
+        label_74 = new QLabel(page_0);
+        label_74->setObjectName(QStringLiteral("label_74"));
+        label_74->setGeometry(QRect(310, 55, 971, 111));
+        label_74->setAlignment(Qt::AlignCenter);
         stackedWidget_2->addWidget(page_0);
         page_1 = new QWidget();
         page_1->setObjectName(QStringLiteral("page_1"));
@@ -545,9 +519,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon5;
-        icon5.addFile(QStringLiteral("../../../Downloads/close-5758.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_annuler->setIcon(icon5);
+        QIcon icon6;
+        icon6.addFile(QStringLiteral("../../../Downloads/close-5758.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_annuler->setIcon(icon6);
         bouton_ajouter = new QPushButton(groupBox_2);
         bouton_ajouter->setObjectName(QStringLiteral("bouton_ajouter"));
         bouton_ajouter->setGeometry(QRect(30, 380, 161, 81));
@@ -559,9 +533,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon6;
-        icon6.addFile(QStringLiteral("../../../Downloads/green-add-button-12023 (1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_ajouter->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QStringLiteral("../../../Downloads/green-add-button-12023 (1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_ajouter->setIcon(icon7);
         label_12 = new QLabel(groupBox_2);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setGeometry(QRect(20, 260, 121, 51));
@@ -601,9 +575,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon7;
-        icon7.addFile(QStringLiteral("../../../Downloads/red-delete-10437.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_supprimer->setIcon(icon7);
+        QIcon icon8;
+        icon8.addFile(QStringLiteral("../../../Downloads/red-delete-10437.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_supprimer->setIcon(icon8);
         groupBox_3 = new QGroupBox(groupBox_2);
         groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
         groupBox_3->setGeometry(QRect(440, 480, 571, 261));
@@ -619,9 +593,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon8;
-        icon8.addFile(QStringLiteral("../../../Downloads/search-2910.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_recherche->setIcon(icon8);
+        QIcon icon9;
+        icon9.addFile(QStringLiteral("../../../Downloads/search-2910.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_recherche->setIcon(icon9);
         le_recherche = new QLineEdit(groupBox_3);
         le_recherche->setObjectName(QStringLiteral("le_recherche"));
         le_recherche->setEnabled(true);
@@ -646,9 +620,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon9;
-        icon9.addFile(QStringLiteral("../../../Downloads/sort-ascending-6615.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_tri->setIcon(icon9);
+        QIcon icon10;
+        icon10.addFile(QStringLiteral("../../../Downloads/sort-ascending-6615.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_tri->setIcon(icon10);
         label_22 = new QLabel(groupBox_2);
         label_22->setObjectName(QStringLiteral("label_22"));
         label_22->setGeometry(QRect(1020, 480, 541, 261));
@@ -677,7 +651,7 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        bouton_pdf->setIcon(icon9);
+        bouton_pdf->setIcon(icon10);
         pushButton_22 = new QPushButton(page_1);
         pushButton_22->setObjectName(QStringLiteral("pushButton_22"));
         pushButton_22->setGeometry(QRect(1460, 10, 111, 61));
@@ -826,9 +800,9 @@ public:
 " border-color: cyan;\n"
 "selection-background-color: green;\n"
 "selection-color: rgb(98, 98, 98);"));
-        QIcon icon10;
-        icon10.addFile(QStringLiteral("../../../Downloads/transfer-3819.png"), QSize(), QIcon::Normal, QIcon::Off);
-        bouton_modifier->setIcon(icon10);
+        QIcon icon11;
+        icon11.addFile(QStringLiteral("../../../Downloads/transfer-3819.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bouton_modifier->setIcon(icon11);
         label_20 = new QLabel(groupBox_5);
         label_20->setObjectName(QStringLiteral("label_20"));
         label_20->setGeometry(QRect(50, 300, 121, 51));
@@ -1012,22 +986,67 @@ public:
         stat->setObjectName(QStringLiteral("stat"));
         stat->setGeometry(QRect(860, 340, 121, 51));
         stackedWidget_2->addWidget(page_4);
-        pushButton_2 = new QPushButton(page_001);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(320, 20, 61, 61));
-        QIcon icon11;
-        icon11.addFile(QStringLiteral("../../../Downloads/website-menu-green-circle-20588.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButton_2->setIcon(icon11);
-        pushButton_2->setIconSize(QSize(50, 50));
-        pushButton_2->setCheckable(true);
-        pushButton_3 = new QPushButton(page_001);
-        pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
-        pushButton_3->setGeometry(QRect(1750, 20, 121, 61));
+
+        gridLayout->addWidget(stackedWidget_2, 0, 2, 1, 1);
+
+        widget1 = new QWidget(widget);
+        widget1->setObjectName(QStringLiteral("widget1"));
+        widget1->setMinimumSize(QSize(81, 941));
+        widget1->setMaximumSize(QSize(16777215, 941));
+        pushButton_5 = new QPushButton(widget1);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(10, 310, 61, 61));
+        pushButton_5->setIcon(icon2);
+        pushButton_5->setIconSize(QSize(50, 50));
+        pushButton_5->setCheckable(true);
+        pushButton_5->setAutoExclusive(true);
+        pushButton_6 = new QPushButton(widget1);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setGeometry(QRect(10, 430, 61, 61));
+        pushButton_6->setIcon(icon4);
+        pushButton_6->setIconSize(QSize(50, 50));
+        pushButton_6->setCheckable(true);
+        pushButton_6->setAutoExclusive(true);
+        pushButton_7 = new QPushButton(widget1);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pushButton_7->setGeometry(QRect(10, 840, 61, 61));
+        pushButton_7->setCheckable(true);
+        pushButton_7->setAutoExclusive(true);
+        pushButton_8 = new QPushButton(widget1);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        pushButton_8->setGeometry(QRect(10, 190, 61, 61));
+        pushButton_8->setIcon(icon3);
+        pushButton_8->setIconSize(QSize(40404, 40));
+        pushButton_8->setCheckable(true);
+        pushButton_8->setAutoExclusive(true);
+        pushButton_9 = new QPushButton(widget1);
+        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
+        pushButton_9->setGeometry(QRect(10, 80, 61, 61));
+        pushButton_9->setIcon(icon);
+        pushButton_9->setIconSize(QSize(50, 50));
+        pushButton_9->setCheckable(true);
+        pushButton_9->setAutoExclusive(true);
+        pushButton_15 = new QPushButton(widget1);
+        pushButton_15->setObjectName(QStringLiteral("pushButton_15"));
+        pushButton_15->setGeometry(QRect(10, 540, 61, 61));
+        pushButton_15->setIcon(icon1);
+        pushButton_15->setIconSize(QSize(50, 50));
+        pushButton_15->setCheckable(true);
+        pushButton_15->setAutoExclusive(true);
+        label_6 = new QLabel(widget1);
+        label_6->setObjectName(QStringLiteral("label_6"));
+        label_6->setGeometry(QRect(10, 10, 61, 51));
+        label_6->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        label_6->setPixmap(QPixmap(QString::fromUtf8("../../../Downloads/370293604_1773005379805812_53322258381366709_n-removebg-preview (1).png")));
+        label_6->setScaledContents(true);
+
+        gridLayout->addWidget(widget1, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_001);
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1920, 37));
+        menuBar->setGeometry(QRect(0, 0, 1920, 42));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -1062,13 +1081,6 @@ public:
         username->setText(QString());
         password->setText(QString());
         label_24->setText(QString());
-        pushButton_5->setText(QString());
-        pushButton_6->setText(QString());
-        pushButton_7->setText(QApplication::translate("MainWindow", "exit", Q_NULLPTR));
-        pushButton_8->setText(QString());
-        pushButton_9->setText(QString());
-        pushButton_15->setText(QString());
-        label_6->setText(QString());
         pushButton_10->setText(QApplication::translate("MainWindow", "employe", Q_NULLPTR));
         pushButton_11->setText(QApplication::translate("MainWindow", " transport", Q_NULLPTR));
         pushButton_12->setText(QApplication::translate("MainWindow", "maintenance", Q_NULLPTR));
@@ -1077,8 +1089,9 @@ public:
         pushButton_17->setText(QApplication::translate("MainWindow", "return", Q_NULLPTR));
         label_15->setText(QString());
         label->setText(QString());
-        pushButton_16->setText(QApplication::translate("MainWindow", "next", Q_NULLPTR));
         label_26->setText(QString());
+        pushButton_2->setText(QString());
+        label_74->setText(QApplication::translate("MainWindow", "WELCOME", Q_NULLPTR));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "Ajout", Q_NULLPTR));
         label_7->setText(QApplication::translate("MainWindow", "N demande", Q_NULLPTR));
         label_8->setText(QApplication::translate("MainWindow", "Montant", Q_NULLPTR));
@@ -1159,8 +1172,13 @@ public:
         pb_mod->setText(QApplication::translate("MainWindow", "Modifier", Q_NULLPTR));
         pb_tri->setText(QApplication::translate("MainWindow", "Tri", Q_NULLPTR));
         stat->setText(QApplication::translate("MainWindow", "stat", Q_NULLPTR));
-        pushButton_2->setText(QString());
-        pushButton_3->setText(QString());
+        pushButton_5->setText(QString());
+        pushButton_6->setText(QString());
+        pushButton_7->setText(QApplication::translate("MainWindow", "exit", Q_NULLPTR));
+        pushButton_8->setText(QString());
+        pushButton_9->setText(QString());
+        pushButton_15->setText(QString());
+        label_6->setText(QString());
     } // retranslateUi
 
 };
