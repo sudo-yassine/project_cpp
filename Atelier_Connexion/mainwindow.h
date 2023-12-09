@@ -3,6 +3,8 @@
 #include "arduino.h"
 #include "localisation.h"
 #include"maintenance.h"
+#include "employee.h"
+#include "paiment.h"
 
 #include <QMainWindow>
 #include<QtCharts>
@@ -75,7 +77,7 @@ private slots:
      void on_pushButton_23_clicked();
 
      void on_pushButton_25_clicked();
-     //////
+     //////////////////////////////////////////////////////////
      void on_pb_Ajouter_clicked();
 
      void on_pb_Supprimer_clicked();
@@ -103,12 +105,34 @@ private slots:
 
      void on_pushButton_17_clicked();
 
+     void on_pushButton_10_clicked();
+     ////////////////////////////////////////////////////////////
+
+     /*void on_pb_ajouter_clicked();
+
+     void on_pb_supp_clicked();
+
+     void on_pb_modifier_clicked();
+
+     void on_pb_tri1_clicked();
+
+     void on_pb_pdf1_clicked();
+
+     void on_pushButton1_clicked();
+
+     void on_pushButton_salaire_clicked();
+
+     void on_verifier_clicked();*/
+
+
+
 private:
      Ui::MainWindow *ui;
      Localisation L;
      Arduino A;
      QByteArray data;
      Maintenance M;
+     employee p;
 
 };
 
