@@ -4,6 +4,7 @@
 #include "localisation.h"
 #include"maintenance.h"
 #include "employee.h"
+#include "paiment.h"
 
 #include <QMainWindow>
 #include<QtCharts>
