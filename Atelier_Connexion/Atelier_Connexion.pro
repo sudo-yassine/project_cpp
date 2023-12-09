@@ -32,16 +32,14 @@ SOURCES += \
         main.cpp \
     maintenance.cpp \
         mainwindow.cpp \
-    connection.cpp \
-    paiment.cpp
+    connection.cpp
 
 HEADERS += \
     arduino.h \
     localisation.h \
     maintenance.h \
         mainwindow.h \
-    connection.h \
-    paiment.h
+    connection.h
 
 FORMS += \
         mainwindow.ui

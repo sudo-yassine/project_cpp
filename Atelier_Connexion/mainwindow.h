@@ -4,7 +4,6 @@
 #include "localisation.h"
 #include"maintenance.h"
 #include "employee.h"
-#include "paiment.h"
 
 #include <QMainWindow>
 #include<QtCharts>
@@ -132,7 +131,7 @@ private:
      Arduino A;
      QByteArray data;
      Maintenance M;
-     employee p;
+     //employee p;
 
 };
 

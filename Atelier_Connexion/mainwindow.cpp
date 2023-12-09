@@ -4,7 +4,7 @@
 #include "arduino.h"
 #include "maintenance.h"
 #include "employee.h"
-#include "paiment.h"
+
 
 //#include "emailsender.h"
 //#include "calendrier.h"
@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->tab_employe->setModel(p.afficher());
+   // ui->tab_employe->setModel(p.afficher());
 
 
     int ret=A.connect_arduino(); // lancer la connexion à arduino
@@ -53,54 +53,8 @@ MainWindow::MainWindow(QWidget *parent) :
              //stat
 ////////////////////////////////////////
 
-             QSqlQueryModel* model = p.afficher();
-             int totalCount = model->rowCount();
-
-             int mecanisianCount = 0;
-             int electrisanCount = 0;
-             int employeeCount = 0;
-
-             for (int i = 0; i < totalCount; ++i) {
-                 QString SPECIALITE = model->record(i).value("SPECIALITE").toString();
-             // Calcule le nombre d'employés dans chaque catégorie (spécialité)
-                 if (SPECIALITE == "mecanicien") {
-                     mecanisianCount++;
-                 } else if (SPECIALITE == "electrician") {
-                     electrisanCount++;
-                 } else if (SPECIALITE == "employe") {
-                     employeeCount++;
-                 }
-             }
 
 
-             double mecanisianPercentage = (mecanisianCount * 100.0) / totalCount;
-             double electrisanPercentage = (electrisanCount * 100.0) / totalCount;
-             double employeePercentage = (employeeCount * 100.0) / totalCount;
-
-             //définir les valeurs dans votre graphique
-             QBarSet *set00 = new QBarSet("Mecanisian");
-             QBarSet *set10 = new QBarSet("Electrisan");
-             QBarSet *set20 = new QBarSet("Employee");
-             *set00 << mecanisianPercentage;
-             *set10 << electrisanPercentage;
-             *set20 << employeePercentage;
-             QBarSeries *series = new QBarSeries();
-             series->append(set00);
-             series->append(set10);
-             series->append(set20);
-             QChart *chart = new QChart();
-             chart->addSeries(series);
-             //chart->setTitle("% Mecanisian , electrisan et employee  ");
-             chart->setAnimationOptions(QChart:: SeriesAnimations);
-             chart->resize(400,400);
-             QStringList categories;
-             categories << " % " ;
-             QBarCategoryAxis *axis = new QBarCategoryAxis();
-             axis->append(categories);
-             chart->createDefaultAxes();
-             chart->setAxisX(axis,series);
-             QChartView *chartView = new QChartView(chart);
-             chartView->setParent(ui->le_stat);
 
 //////////////////////////////////
     QBarSet *set0 = new QBarSet("demandes SOUSSE");
@@ -118,17 +72,17 @@ MainWindow::MainWindow(QWidget *parent) :
         series5->append(set2);
         series5->append(set3);
         QChart *chart5 = new QChart();
-        chart5->addSeries(series);
+        chart5->addSeries(series5);
         chart5->setTitle("DEMANDES");
         chart5->setAnimationOptions(QChart:: SeriesAnimations);
         chart5->resize(530,350);
         QStringList categories7;
         categories7 << " Num demandes" ;
         QBarCategoryAxis *axis7 = new QBarCategoryAxis();
-        axis7->append(categories);
+        axis7->append(categories7);
         chart5->createDefaultAxes();
-        chart5->setAxisX(axis,series);
-        QChartView *chartView1 = new QChartView(chart);
+        chart5->setAxisX(axis7,series5);
+        QChartView *chartView1 = new QChartView(chart5);
         chartView1->setParent(ui->label_22);
 }
 
