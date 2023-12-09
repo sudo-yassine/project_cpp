@@ -28,6 +28,7 @@ CONFIG += c++11
 
 SOURCES += \
     arduino.cpp \
+    employee.cpp \
     localisation.cpp \
         main.cpp \
     maintenance.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     arduino.h \
+    employee.h \
     localisation.h \
     maintenance.h \
         mainwindow.h \

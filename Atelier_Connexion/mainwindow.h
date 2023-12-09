@@ -107,7 +107,7 @@ private slots:
      void on_pushButton_10_clicked();
      ////////////////////////////////////////////////////////////
 
-     /*void on_pb_ajouter_clicked();
+    void on_pb_ajouter_clicked();
 
      void on_pb_supp_clicked();
 
@@ -121,7 +121,7 @@ private slots:
 
      void on_pushButton_salaire_clicked();
 
-     void on_verifier_clicked();*/
+//     void on_verifier_clicked();
 
 
 
@@ -131,7 +131,7 @@ private:
      Arduino A;
      QByteArray data;
      Maintenance M;
-     //employee p;
+     employee p;
 
 };
 
